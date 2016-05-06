@@ -1,5 +1,7 @@
 <?php
 
+namespace Hazan\RTL;
+
 use Flarum\Event\ConfigureClientView;
 use Illuminate\Contracts\Events\Dispatcher;
 
