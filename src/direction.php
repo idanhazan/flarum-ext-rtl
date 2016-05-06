@@ -12,9 +12,9 @@ class Extension extends BaseExtension
 		$events->listen(BuildClientView::class, [$this, 'addAssets']);
     }
 	
-	public function addAssets(BuildClientView $event){
+	public function addAssets(BuildClientView $event) {
 		 $event->forumAssets([
-			__DIR__.'/../less/forum/rtl.less'
+			__DIR__ . '/../less/forum/rtl.less'
 		]);
 	}
 }
