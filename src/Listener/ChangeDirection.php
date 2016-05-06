@@ -1,6 +1,6 @@
 <?php
 
-namespace Hazan\RTL\Listener;
+namespace Flagrow\RTL\Listener;
 
 use Flarum\Event\ConfigureClientView;
 use Illuminate\Contracts\Events\Dispatcher;
