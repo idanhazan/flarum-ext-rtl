@@ -5,7 +5,7 @@
   "type": "flarum-extension",
   "keywords": ["flarum", "flagrow", "rtl"],
   "homepage": "http://flagrow.github.io/",
-  "time": "2016-06-DD",
+  "time": "2016-06-07",
   "license": "MIT",
   "require": {
     "flarum/core": "^0.1.0-beta.5"
