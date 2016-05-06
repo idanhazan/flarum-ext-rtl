@@ -19,7 +19,7 @@
     "flarum-extension": {
       "title": "RTL",
       "icon": {
-        "name:" "chevron-circle-left",
+        "name": "chevron-circle-left",
         "backgroundColor": "#000000",
         "color": "#ffffff"
       }
