@@ -1,2 +1,2 @@
 # Flarum's RTL Extension
-Flarum's RTL Extension
+composer require hazanpro/flarum-ext-rtl
