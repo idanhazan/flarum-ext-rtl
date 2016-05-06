@@ -8,9 +8,9 @@ use Illuminate\Events\Dispatcher;
 
 class Extension extends BaseExtension
 {
-    public function listen(Dispatcher $events) {
+	public function listen(Dispatcher $events) {
 		$events->listen(BuildClientView::class, [$this, 'addAssets']);
-    }
+	}
 	
 	public function addAssets(BuildClientView $event) {
 		 $event->forumAssets([
