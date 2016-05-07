@@ -339,3 +339,113 @@
 		right: 20px; //left: 20px;
 	}
 }
+
+//Post.less
+
+.Post-header {
+	> ul {
+		> li {
+			margin-left: 10px; //margin-right: 10px;
+		}
+	}
+}
+
+.PostUser {
+	.UserCard {
+		right: -100px; //left: -100px;
+	}
+}
+
+.PostUser-badges {
+	text-align: left; //text-align: right;
+
+	.Badge {
+		margin-right: -10px; //margin-left: -10px;
+	}
+}
+
+.PostMeta-time {
+	margin-right: 5px; //margin-left: 5px;
+}
+
+.EventPost-icon {
+	float: right; //float: left;
+}
+
+.Post-footer {
+	.icon {
+		margin-left: 5px; //margin-right: 5px;
+	}
+}
+
+.Post-actions {
+	float: left; //float: right;
+
+	> ul {
+		> li {
+			margin-right: -5px; //margin-left: -5px;
+			margin-left: 0; //margin-right: 0;
+		}
+	}
+}
+
+.PostPreview {
+	padding-right: 50px; //padding-left: 50px;
+
+	.Avatar {
+		float: right; //float: left;
+		margin-right: -50px; //margin-left: -50px;
+	}
+
+	.username {
+		margin-left: 5px; //margin-right: 5px;
+	}
+
+	time {
+		margin-left: 5px; //margin-right: 5px;
+	}
+}
+
+@media @phone {
+	.Post-header {
+		.Avatar {
+			margin-left: 5px; //margin-right: 5px;
+		}
+	}
+
+	.PostUser-badges {
+		right: 6px; //left: 6px;
+
+		.Badge {
+			margin-right: -13px; //margin-left: -13px;
+		}
+	}
+
+	.EventPost {
+		padding-right: 50px; //padding-left: 50px;
+	}
+
+	.EventPost-icon {
+		margin-right: -30px; //margin-left: -30px;
+	}
+}
+
+@media @tablet-up {
+	.Post {
+		padding-right: 20px + @avatar-column-width; //padding-left: 20px + @avatar-column-width;
+	}
+
+	.PostUser-avatar {
+		right: -@avatar-column-width; //left: -@avatar-column-width;
+	}
+
+	.PostUser-badges {
+		float: right; //float: left;
+		margin-right: -@avatar-column-width + 5px; //margin-left: -@avatar-column-width + 5px;
+	}
+
+	.EventPost-icon {
+		text-align: left; //text-align: right;
+		margin-right: -@avatar-column-width; //margin-left: -@avatar-column-width;
+	}
+}
