@@ -220,3 +220,32 @@
 		left: 10px; //right: 10px;
 	}
 }
+
+//Navigation.less
+
+.Navigation-pin {
+	margin-right: -5px !important; //margin-left: -5px !important;
+	.transition(~"opacity 0.2s, margin-right 0.2s"); //.transition(~"opacity 0.2s, margin-left 0.2s");
+
+	.icon {
+		.rotate(45deg); //.rotate(45deg); -> TODO: Change to RTL degrees
+	}
+}
+
+@media @desktop-hd {
+	.hasPane.panePinned, .hasPane.paneShowing {
+		.Navigation-pin {
+			margin-right: 1px !important; //margin-left: 1px !important;
+		}
+	}
+
+	.hasPane.panePinned .Navigation-pin .icon {
+		.rotate(0deg); //.rotate(0deg); -> -> TODO: Change to RTL degrees
+	}
+}
+
+.Navigation-drawer.new {
+	&:after {
+		left: 10px; //right: 10px;
+	}
+}
