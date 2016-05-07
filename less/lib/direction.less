@@ -9,3 +9,65 @@
 .AlertManager {
 	right: 20px; //left: 20px;
 }
+
+//App.less
+
+@media @phone {
+	.App-primaryControl {
+		left: 0; //right: 0;
+	}
+
+	.App-titleControl {
+		right: 50%; //left: 50%;
+		margin-right: -100px; //margin-left: -100px;
+	}
+
+	.App-backControl {
+		right: 0; //left: 0;
+	}
+}
+
+@media @phone {
+	.App-drawer {
+		right: 0; //left: 0;
+	}
+}
+
+@media @phone {
+	.Header-controls {
+		.FormControl, .ButtonGroup, .Button {
+			text-align: right; //text-align: left;
+		}
+	}
+}
+
+@media @tablet-up {
+	.Header-navigation {
+		float: right; //float: left;
+		margin-left: 25px; //margin-right: 25px;
+	}
+
+	.Header-primary {
+		float: right; //float: left;
+	}
+
+	.Header-title {
+		float: right; //float: left;
+	}
+
+	.Header-secondary {
+		float: left; //float: right;
+
+		.Search {
+			margin-left: 10px; //margin-right: 10px;
+		}
+	}
+}
+
+@media @tablet {
+	.Header-secondary .Search {
+		&:not(.active) input {
+			padding-left: 0; //padding-right: 0;
+		}
+	}
+}
