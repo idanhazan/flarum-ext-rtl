@@ -342,3 +342,48 @@
 		float: right; //float: left;
 	}
 }
+
+//sideNav.less
+
+@media @tablet-up {
+	.sideNav {
+		& .Dropdown--select {
+			& .Dropdown-menu {
+				& > li > a {
+					padding: 8px 8px 0 30px; //padding: 8px 0 8px 30px;
+
+					& .Button-icon {
+						float: right; //float: left;
+						margin-right: -30px; //margin-left: -30px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.sideNav--horizontal {
+	> ul > li, .Dropdown-menu > li {
+		margin: 0 0 20px 0; //margin: 0 20px 0 0;
+	}
+
+	.Dropdown--select .Dropdown-menu > li > a {
+		padding-right: 25px; //padding-left: 25px;
+
+		.icon {
+			margin-right: -25px; //margin-left: -25px;
+		}
+	}
+}
+
+@media @desktop-up {
+	.sideNav {
+		float: right; //float: left;
+	}
+}
+
+@media @desktop-up {
+	.sideNavOffset {
+		margin-right: 240px; //margin-left: 240px;
+	}
+}
