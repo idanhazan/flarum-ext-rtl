@@ -1,43 +1,42 @@
-AvatarEditor.less
+//AvatarEditor.less
 
 @media @tablet-up {
 	.Dropdown-menu {
-	left: 35%;
+		right: 35%; //left: 35%;
+	}
 }
 
-Composer.less
+//Composer.less
 
 .ComposerBody-header {
 	> li {
-		margin-right: -4px;
+		margin-left: -4px; //margin-right: -4px;
 	}
 	&, &[disabled], &:focus {
-		padding: 0 20px 0 0;
+		padding: 0 0 20px 0; //padding: 0 20px 0 0;
 	}
 }
 
 .Composer-controls {
-	right: 10px;
+	left: 10px; //right: 10px;
 }
 
 @media @phone {
 	.ComposerBody-content {
 		.minimized & {
-			margin-right: 50px;
+			margin-left: 50px; //margin-right: 50px;
 		}
 	}
 }
 
 @media @tablet-up {
 	.ComposerBody-avatar {
-		float: left;
+		float: left; //float: left;
 	}
-
 	.ComposerBody-content {
-		margin-left: 85px;
-
+		margin-right: 85px; //margin-left: 85px;
 		.minimized &, .fullScreen & {
-			margin-left: 0;
+			margin-right: 0; //margin-left: 0;
 		}
 	}
 }
@@ -45,26 +44,27 @@ Composer.less
 @media @desktop-up {
 	.Composer:not(.fullScreen) {
 		.App--index & {
-			margin-left: 220px;
-			margin-right: -20px;
+			margin-left: -20px; //margin-right: -20px;
+			margin-right: 220px; //margin-left: 220px;
+			
 		}
 		.App--discussion & {
-			margin-left: -20px;
-			margin-right: 205px;
+			margin-left: 205px; //margin-right: 205px;
+			margin-right: -20px; //margin-left: -20px;
 		}
 	}
 }
 
 @media @desktop-hd {
 	.hasPane.panePinned .App-composer {
-		left: @pane-width;
+		right: @pane-width; //left: @pane-width;
 	}
 }
 
 @media @tablet-up {
 	.TextEditor-controls {
-		margin: 0 -20px 0 -105px;
+		margin: 0 0 -20px -105px; //margin: 0 -20px 0 -105px;
 		li {
-			margin-right: 5px;
+			margin-left: 5px; //margin-right: 5px;
 		}
 }
