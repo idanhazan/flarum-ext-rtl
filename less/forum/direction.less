@@ -510,3 +510,28 @@
 		}
 	}
 }
+
+//UserCard.less
+
+.UserCard-controls {
+	float: left; //float: right;
+
+	.Dropdown-menu {
+		left: 0; //right: 0;
+		right: auto; //left: auto;
+	}
+}
+
+.UserCard-profile {
+	text-align: right; //text-align: left;
+	padding-right: 130px; //padding-left: 130px;
+
+	@media @phone {
+		padding-right: 0; //padding-left: 0;
+	}
+}
+
+.UserCard-avatar {
+	float: right; //float: left;
+	margin-right: -130px; //margin-left: -130px;
+}
