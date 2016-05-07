@@ -12,6 +12,7 @@
 	> li {
 		margin-left: -4px; //margin-right: -4px;
 	}
+	
 	&, &[disabled], &:focus {
 		padding: 0 0 20px 0; //padding: 0 20px 0 0;
 	}
@@ -35,6 +36,7 @@
 	}
 	.ComposerBody-content {
 		margin-right: 85px; //margin-left: 85px;
+		
 		.minimized &, .fullScreen & {
 			margin-right: 0; //margin-left: 0;
 		}
@@ -48,6 +50,7 @@
 			margin-right: 220px; //margin-left: 220px;
 			
 		}
+		
 		.App--discussion & {
 			margin-left: 205px; //margin-right: 205px;
 			margin-right: -20px; //margin-left: -20px;
@@ -64,6 +67,7 @@
 @media @tablet-up {
 	.TextEditor-controls {
 		margin: 0 0 -20px -105px; //margin: 0 -20px 0 -105px;
+		
 		li {
 			margin-left: 5px; //margin-right: 5px;
 		}
@@ -74,5 +78,119 @@
 .DiscussionHero {
 	.badges {
 		margin-left: 10px; //margin-right: 10px;
+	}
+}
+
+//DiscussionListItem.less
+
+.DiscussionListItem-author {
+	float: right; //float: left;
+}
+
+.DiscussionListItem-badges {
+	float: right; //float: left;
+	text-align: left; //text-align: right;
+	
+	.Badge {
+		margin-right: -10px; //margin-left: -10px;
+	}
+}
+
+.DiscussionListItem-info {
+	.item-terminalPost .icon {
+		margin-left: -1px; //margin-right: -1px;
+	}
+}
+
+.DiscussionListItem-count {
+	float: left; //float: right;
+}
+
+.DiscussionListItem-relevantPosts {
+	@media @phone {
+		margin-left: -35px; //margin-right: -35px;
+		margin-right: -45px; //margin-left: -45px;
+	}
+	
+	.PostPreview {
+		.PostPreview-content {
+			padding-right: 0; //padding-left: 0;
+		}
+		
+		&:first-child { //Original: "&:first-child" <> Change to: "&:last-child"?
+			border-radius: @border-radius @border-radius 0 0;
+		}
+	}
+}
+
+@media @phone {
+	.DiscussionListItem-content {
+		padding-left: 15px + 35px; //padding-right: 15px + 35px;
+		padding-right: 15px + 45px; //padding-left: 15px + 45px;
+	}
+	
+	.DiscussionListItem-author {
+		margin-right: -45px; //margin-left: -45px;
+	}
+	
+	.DiscussionListItem-badges {
+		margin-right: -45px; //margin-left: -45px;
+		
+		.badge {
+			margin-right: -13px; //margin-left: -13px;
+		}
+	}
+	
+	.DiscussionListItem-main {
+		margin-left: -45px; //margin-right: -45px;
+	}
+	
+	.DiscussionListItem-count {
+		margin-left: -35px; //margin-right: -35px;
+	}
+}
+
+@media @tablet-up {
+	.DiscussionListItem {
+		margin-right: -15px; //margin-left: -15px;
+		padding-right: 15px; //padding-left: 15px;
+		padding-left: 25px; //padding-right: 25px;
+		margin-left: -15px; //margin-right: -15px;
+	}
+	
+	.DiscussionListItem-controls {
+		left: 5px; //right: 5px;
+		
+		.Dropdown-menu {
+			right: auto; //left: auto;
+			left: 0; //right: 0;
+		}
+	}
+	
+	.DiscussionListItem-content {
+		padding-left: 80px; // padding-right: 80px;
+		padding-right: 52px; //padding-left: 52px;
+	}
+	
+	.DiscussionListItem-author {
+		margin-right: -52px; //margin-left: -52px;
+	}
+	
+	.DiscussionListItem-badges {
+		margin-right: -55px; //margin-left: -55px;
+	}
+	
+	.DiscussionListItem-main {
+		margin-left: -65px; //margin-right: -65px;
+	}
+	
+	.DiscussionListItem-count {
+		margin-left: -70px; //margin-right: -70px;
+		padding-right: 21px; //padding-left: 21px;
+		
+		&:before {
+			float: right; //float: left;
+			margin-right: -21px; //margin-left: -21px;
+		}
 	}
 }
