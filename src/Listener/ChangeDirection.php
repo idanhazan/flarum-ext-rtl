@@ -16,10 +16,12 @@ class ChangeDirection
     {
         if ($event->isForum()) {
 		//$event->addAssets([__DIR__ . '/../../less/forum/rtl.less']);
+		$event->addAssets([__DIR__ . '/../../less/lib/direction.less']);
 		$event->addAssets([__DIR__ . '/../../less/forum/direction.less']);
         }
         else if($event->isAdmin()) {
-		$event->addAssets([__DIR__ . '/../../less/admin/rtl.less']);
+		$event->addAssets([__DIR__ . '/../../less/lib/direction.less']);
+		$event->addAssets([__DIR__ . '/../../less/admin/direction.less']);
         }
     }
 }
