@@ -457,3 +457,34 @@
 //		right: -30px; //left: -30px;
 //	}
 // }
+
+//Scrubber.less
+
+.Scrubber {
+	& a {
+		margin-right: -5px; //margin-left: -5px;
+
+		& .fa {
+			margin-left: 2px; //margin-right: 2px;
+		}
+	}
+}
+
+.Scrubber-scrollbar {
+	margin: 8px 8px 0 3px; //margin: 8px 0 8px 3px;
+}
+
+.Scrubber-unread {
+	border-right: 1px solid lighten(@muted-color, 10%); //border-left: 1px solid lighten(@muted-color, 10%);
+	background-image: linear-gradient(to left, @control-bg, fade(@control-bg, 0) 10px, fade(@control-bg, 0)); //background-image: linear-gradient(to right, @control-bg, fade(@control-bg, 0) 10px, fade(@control-bg, 0));
+	padding-right: 13px; //padding-left: 13px;
+}
+
+.Scrubber-bar {
+	float: right; //float: left;
+	margin-right: -2px; //margin-left: -2px;
+}
+
+.Scrubber-info {
+	right: 15px; //left: 15px;
+}
