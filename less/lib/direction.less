@@ -71,3 +71,60 @@
 		}
 	}
 }
+
+//Button.less
+
+.ButtonGroup {
+	> .Button {
+		float: right; //float: left;
+
+		&:first-child:not(:last-child):not(.Dropdown-toggle) {
+			margin-right: 0; //margin-left: 0;
+			border-top-left-radius: 0; //border-top-right-radius: 0;
+			border-bottom-left-radius: 0; //border-bottom-right-radius: 0;
+		}
+
+		&:last-child:not(:first-child), &.Dropdown-toggle:not(:first-child) {
+			border-top-right-radius: 0; //border-top-left-radius: 0;
+			border-bottom-right-radius: 0; //border-bottom-left-radius: 0;
+		}
+	}
+
+	.Button + .Button {
+		margin-right: 1px; //margin-left: 1px;
+	}
+}
+
+.Button {
+	.Button-label {
+		.transition(margin-left 0.1s); //.transition(margin-right 0.1s);
+	}
+
+	.LoadingIndicator {
+		margin: 0 0 -10px -15px; //margin: 0 -10px 0 -15px;
+	}
+
+	&.loading {
+		.Button-label {
+			margin-left: 20px; //margin-right: 20px;
+		}
+	}
+}
+
+.SessionDropdown .Dropdown-toggle {
+	.Avatar {
+		margin: -2px -2px 5px -6px; //margin: -2px 5px -2px -6px;
+	}
+}
+
+.Button-icon {
+	margin-left: 3px; //margin-right: 3px;
+}
+
+.Button-caret {
+	margin-right: 3px; //margin-left: 3px;
+}
+
+.Button-badge {
+	margin-right: 10px; //margin-left: 10px;
+}
