@@ -194,3 +194,52 @@
 		}
 	}
 }
+
+//DiscussionPage.less
+
+@media @tablet-up {
+	.DiscussionPage-nav {
+		float: left; //float: right;
+	}
+}
+
+@media @tablet-up {
+	.DiscussionPage-stream {
+		margin-left: 225px; //margin-right: 225px;
+	}
+}
+
+@media @tablet-up {
+	.DiscussionPage-list {
+		right: -@pane-width - 6px; //left: -@pane-width - 6px;
+		.transition(right 0.2s); //.transition(left 0.2s);
+
+		.paneShowing & {
+			right: 0; //left: 0;
+		}
+
+		.DiscussionListItem-content {
+			padding-left: 65px + 15px; //padding-right: 65px + 15px;
+			padding-right: 52px + 15px; //padding-left: 52px + 15px;
+		}
+
+		.DiscussionListItem-relevantPosts {
+			margin-left: -65px; //margin-right: -65px;
+			margin-right: -52px; //margin-left: -52px;
+		}
+	}
+}
+
+@media @desktop-hd {
+	.DiscussionPage-list {
+		.panePinned & {
+			right: 0; //left: 0;
+		}
+	}
+
+	.App-content, .App-footer {
+		.hasPane.panePinned & {
+			margin-right: @pane-width; //margin-left: @pane-width;
+		}
+	}
+}
