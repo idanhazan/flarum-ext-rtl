@@ -153,3 +153,46 @@
 		}
 	}
 }
+
+//Dropdown.less
+
+.Dropdown-menu {
+	right: 0; //left: 0;
+	text-align: right; //text-align: left;
+
+	> li {
+		> a, > button, > span {
+			text-align: right; //text-align: left;
+
+			&.hasIcon {
+				padding-right: 40px; //padding-left: 40px;
+			}
+
+			.Button-icon {
+				float: right; //float: left;
+				margin-right: -25px; //margin-left: -25px;
+			}
+		}
+	}
+}
+
+.Dropdown-menu--left { //.Dropdown-menu--right {
+	left: 0; //right: 0;
+	right: auto; //left: auto;
+}
+
+@media @phone {
+	.Dropdown .Dropdown-menu {
+		> li {
+			> a, > button {
+				&.hasIcon {
+					padding-right: 50px; //padding-left: 50px;
+				}
+
+				.Button-icon {
+					margin-right: -30px; //margin-left: -30px;
+				}
+			}
+		}
+	}
+}
