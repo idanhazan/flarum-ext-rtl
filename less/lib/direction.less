@@ -302,3 +302,31 @@
 .Select-caret {
 	margin-right: -30px; //margin-left: -30px;
 }
+
+//Tooltip.less
+
+.tooltip {
+	&.right  { margin-right:  3px; padding: 0 @tooltip-arrow-width; } //&.right  { margin-left:  3px; padding: 0 @tooltip-arrow-width; }
+	&.left   { margin-right: -3px; padding: 0 @tooltip-arrow-width; } //&.left   { margin-left: -3px; padding: 0 @tooltip-arrow-width; }
+}
+
+.tooltip {
+	&.top .tooltip-arrow {
+		right: 50%; //left: 50%;
+		margin-right: -@tooltip-arrow-width; //margin-left: -@tooltip-arrow-width;
+	}
+
+	&.right .tooltip-arrow {
+		right: 0; //left: 0;
+	}
+
+	&.left .tooltip-arrow {
+		left: 0; //right: 0;
+		border-right-color: @tooltip-bg; //border-left-color: @tooltip-bg;
+	}
+
+	&.bottom .tooltip-arrow {
+		right: 50%; //left: 50%;
+		margin-right: -@tooltip-arrow-width; //margin-left: -@tooltip-arrow-width;
+	}
+}
