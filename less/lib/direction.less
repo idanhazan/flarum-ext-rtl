@@ -99,10 +99,8 @@
 		margin: 0 -15px 0 -10px; //margin: 0 -10px 0 -15px;
 	}
 
-	&.loading {
-		.Button-label {
-			margin-left: 20px; //margin-right: 20px;
-		}
+	&.loading .Button-label {
+		margin-left: 20px; //margin-right: 20px;
 	}
 }
 
@@ -155,18 +153,16 @@
 	right: 0; //left: 0;
 	text-align: right; //text-align: left;
 
-	> li {
-		> a, > button, > span {
-			text-align: right; //text-align: left;
+	> li > a, > button, > span {
+		text-align: right; //text-align: left;
 
-			&.hasIcon {
-				padding-right: 40px; //padding-left: 40px;
-			}
+		&.hasIcon {
+			padding-right: 40px; //padding-left: 40px;
+		}
 
-			.Button-icon {
-				float: right; //float: left;
-				margin-right: -25px; //margin-left: -25px;
-			}
+		.Button-icon {
+			float: right; //float: left;
+			margin-right: -25px; //margin-left: -25px;
 		}
 	}
 }
