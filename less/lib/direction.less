@@ -1,84 +1,29 @@
-#app {
-	direction: rtl;
-}
+//Variables
+@border-radius:		4px;
+@tooltip-arrow-width:	5px;
+@tooltip-bg:		rgba(0, 0, 0, 0.9);
+@screen-tablet:		768px;
+@screen-desktop:	992px;
+@screen-desktop-hd:	1100px;
+@screen-phone-max:	(@screen-tablet - 1);
+@screen-tablet-max:	(@screen-desktop - 1);
+@phone:			~"(max-width: @{screen-phone-max})";
+@tablet:		~"(min-width: @{screen-tablet}) and (max-width: @{screen-tablet-max})";
+@desktop-hd:		~"(min-width: @{screen-desktop-hd})";
+@tablet-up:		~"(min-width: @{screen-tablet})";
+@desktop-up:		~"(min-width: @{screen-desktop})";
 
 //Alert.less
-
 .Alert-controls {
 	margin: 0 8px 0 -8px; //margin: 0 -8px 0 8px;
 }
 
 //AlertManager.less
-
 .AlertManager {
 	right: 20px; //left: 20px;
 }
 
-//App.less
-
-@media @phone {
-	.App-primaryControl {
-		left: 0; //right: 0;
-	}
-
-	.App-titleControl {
-		right: 50%; //left: 50%;
-		margin-right: -100px; //margin-left: -100px;
-	}
-
-	.App-backControl {
-		right: 0; //left: 0;
-	}
-}
-
-@media @phone {
-	.App-drawer {
-		right: 0; //left: 0;
-	}
-}
-
-@media @phone {
-	.Header-controls {
-		.FormControl, .ButtonGroup, .Button {
-			text-align: right; //text-align: left;
-		}
-	}
-}
-
-@media @tablet-up {
-	.Header-navigation {
-		float: right; //float: left;
-		margin-left: 25px; //margin-right: 25px;
-	}
-
-	.Header-primary {
-		float: right; //float: left;
-	}
-
-	.Header-title {
-		float: right; //float: left;
-		margin: 0 0 0 15px; //margin: 0 15px 0 0;
-	}
-
-	.Header-secondary {
-		float: left; //float: right;
-
-		.Search {
-			margin-left: 10px; //margin-right: 10px;
-		}
-	}
-}
-
-@media @tablet {
-	.Header-secondary .Search {
-		&:not(.active) input {
-			padding-left: 0; //padding-right: 0;
-		}
-	}
-}
-
 //Button.less
-
 .ButtonGroup {
 	> .Button {
 		float: right; //float: left;
@@ -100,6 +45,51 @@
 	}
 }
 
+//Button.less
+.ButtonGroup {
+	> .Button {
+		float: right; //float: left;
+
+		&:first-child:not(:last-child):not(.Dropdown-toggle) {
+			margin-right: 0; //margin-left: 0;
+			border-top-left-radius: 0; //border-top-right-radius: 0;
+			border-bottom-left-radius: 0; //border-bottom-right-radius: 0;
+		}
+
+		&:last-child:not(:first-child), &.Dropdown-toggle:not(:first-child) {
+			border-top-right-radius: 0; //border-top-left-radius: 0;
+			border-bottom-right-radius: 0; //border-bottom-left-radius: 0;
+		}
+	}
+
+	.Button + .Button {
+		margin-right: 1px; //margin-left: 1px;
+	}
+}
+
+//Button.less
+.ButtonGroup {
+	> .Button {
+		float: right; //float: left;
+
+		&:first-child:not(:last-child):not(.Dropdown-toggle) {
+			margin-right: 0; //margin-left: 0;
+			border-top-left-radius: 0; //border-top-right-radius: 0;
+			border-bottom-left-radius: 0; //border-bottom-right-radius: 0;
+		}
+
+		&:last-child:not(:first-child), &.Dropdown-toggle:not(:first-child) {
+			border-top-right-radius: 0; //border-top-left-radius: 0;
+			border-bottom-right-radius: 0; //border-bottom-left-radius: 0;
+		}
+	}
+
+	.Button + .Button {
+		margin-right: 1px; //margin-left: 1px;
+	}
+}
+
+//Button.less
 .Button {
 	.Button-label {
 		.transition(margin-left 0.1s); //.transition(margin-right 0.1s);
@@ -116,26 +106,29 @@
 	}
 }
 
+//Button.less
 .SessionDropdown .Dropdown-toggle {
 	.Avatar {
 		margin: -2px -6px -2px 5px; //margin: -2px 5px -2px -6px;
 	}
 }
 
+//Button.less
 .Button-icon {
 	margin-left: 3px; //margin-right: 3px;
 }
 
+//Button.less
 .Button-caret {
 	margin-right: 3px; //margin-left: 3px;
 }
 
+//Button.less
 .Button-badge {
 	margin-right: 10px; //margin-left: 10px;
 }
 
 //Checkbox.less
-
 .Checkbox--switch {
 	padding-right: 65px; //padding-left: 65px;
 
@@ -149,9 +142,11 @@
 	}
 }
 
+//Checkbox.less
 .Checkbox--switch .Checkbox-display {
 	&:before {
 		right: 3px; //left: 3px;
+		.transition(~"opacity 0.2s, right 0.2s"); //.transition(~"opacity 0.2s, left 0.2s");
 
 		.on& {
 			right: 25px; //left: 25px;
@@ -160,7 +155,6 @@
 }
 
 //Dropdown.less
-
 .Dropdown-menu {
 	right: 0; //left: 0;
 	text-align: right; //text-align: left;
@@ -181,29 +175,13 @@
 	}
 }
 
-.Dropdown-menu--left { //.Dropdown-menu--right {
+//Dropdown.less
+.Dropdown-menu--right { // NOTE: SHOULD BE CHANGE TO LEFT?
+	right: auto: //left; auto;
 	left: 0; //right: 0;
-	right: auto; //left: auto;
-}
-
-@media @phone {
-	.Dropdown .Dropdown-menu {
-		> li {
-			> a, > button {
-				&.hasIcon {
-					padding-right: 50px; //padding-left: 50px;
-				}
-
-				.Button-icon {
-					margin-right: -30px; //margin-left: -30px;
-				}
-			}
-		}
-	}
 }
 
 //Form.less
-
 .Form--centered {
 	.checkbox {
 		text-align: right; //text-align: left;
@@ -211,7 +189,6 @@
 }
 
 //Modal.less
-
 .Modal-body {
 	.Form--centered {
 		.helpText {
@@ -220,16 +197,10 @@
 	}
 }
 
-@media @tablet-up {
-	.Modal-close {
-		left: 10px; //right: 10px;
-	}
-}
-
 //Navigation.less
-
 .Navigation-pin {
 	margin-right: -5px !important; //margin-left: -5px !important;
+	border-radius: @border-radius 0 0 @border-radius; // border-radius: 0 @border-radius @border-radius 0;
 	.transition(~"opacity 0.2s, margin-right 0.2s"); //.transition(~"opacity 0.2s, margin-left 0.2s");
 
 	.icon {
@@ -237,18 +208,7 @@
 	}
 }
 
-@media @desktop-hd {
-	.hasPane.panePinned, .hasPane.paneShowing {
-		.Navigation-pin {
-			margin-right: 1px !important; //margin-left: 1px !important;
-		}
-	}
-
-	.hasPane.panePinned .Navigation-pin .icon {
-		.rotate(0deg); //.rotate(0deg); -> -> TODO: Change to RTL degrees
-	}
-}
-
+//Navigation.less
 .Navigation-drawer.new {
 	&:after {
 		left: 10px; //right: 10px;
@@ -256,17 +216,6 @@
 }
 
 //Search.less
-
-@media @tablet-up {
-	.Search {
-		.transition(margin-right 0.4s); //.transition(margin-left 0.4s);
-
-		&.focused {
-			margin-right: -400px; //margin-left: -400px;
-		}
-	}
-}
-
 .Search-results {
 	left: 0; //right: 0;
 	right: auto; //left: auto;
@@ -276,6 +225,7 @@
 	}
 }
 
+//Search.less
 .Search-input {
 	&:before {
 		float: right; //float: left;
@@ -292,29 +242,35 @@
 	}
 }
 
+//Search.less
 .UserSearchResult .Avatar {
 	margin: -2px 0 -2px 10px; //margin: -2px 10px -2px 0;
 }
 
 //Select.less
-
 .Select {
 	select {
 		padding-left: 30px; //padding-right: 30px;
 	}
 }
 
+//Select.less
 .Select-caret {
 	margin-right: -30px; //margin-left: -30px;
 }
 
 //Tooltip.less
-
 .tooltip {
-	&.right  { margin-right:  3px; padding: 0 @tooltip-arrow-width; } //&.right  { margin-left:  3px; padding: 0 @tooltip-arrow-width; }
-	&.left   { margin-right: -3px; padding: 0 @tooltip-arrow-width; } //&.left   { margin-left: -3px; padding: 0 @tooltip-arrow-width; }
+	&.right {
+		margin-right: 3px; //margin-left: 3px;
+	}
+	
+	&.left {
+		margin-right: -3px; //margin-left: -3px;
+	}
 }
 
+//Tooltip.less
 .tooltip {
 	&.top .tooltip-arrow {
 		right: 50%; //left: 50%;
@@ -323,10 +279,13 @@
 
 	&.right .tooltip-arrow {
 		right: 0; //left: 0;
+		border-width: @tooltip-arrow-width 0 @tooltip-arrow-width @tooltip-arrow-width; //border-width: @tooltip-arrow-width @tooltip-arrow-width @tooltip-arrow-width 0;
+		border-left-color: @tooltip-bg; //border-right-color: @tooltip-bg;
 	}
 
 	&.left .tooltip-arrow {
 		left: 0; //right: 0;
+		border-width: @tooltip-arrow-width @tooltip-arrow-width @tooltip-arrow-width 0; //border-width: @tooltip-arrow-width 0 @tooltip-arrow-width @tooltip-arrow-width;
 		border-right-color: @tooltip-bg; //border-left-color: @tooltip-bg;
 	}
 
@@ -337,7 +296,6 @@
 }
 
 //scaffolding.less
-
 .checkbox {
 	padding-right: 20px; //padding-left: 20px;
 
@@ -349,8 +307,121 @@
 }
 
 //sideNav.less
+.sideNav--horizontal {
+	> ul > li, .Dropdown-menu > li {
+		margin: 0 0 0 20px; //margin: 0 20px 0 0;
+	}
+
+	.Dropdown--select .Dropdown-menu > li > a {
+		padding-right: 25px; //padding-left: 25px;
+
+		.icon {
+			margin-right: -25px; //margin-left: -25px;
+		}
+	}
+}
+
+@media @phone {
+	//App.less
+	.App-primaryControl {
+		left: 0; //right: 0;
+	}
+
+	//App.less
+	.App-titleControl {
+		right: 50%; //left: 50%;
+		margin-right: -100px; //margin-left: -100px;
+	}
+
+	//App.less
+	.App-backControl {
+		right: 0; //left: 0;
+	}
+
+	//App.less
+	.App-drawer {
+		right: 0; //left: 0;
+	}
+
+	//App.less
+	.Header-controls {
+		.FormControl, .ButtonGroup, .Button {
+			text-align: right; //text-align: left;
+		}
+	}
+
+	//Dropdown.less
+	.Dropdown .Dropdown-menu {		
+		> li {
+			> a, > button {
+				&.hasIcon {
+					padding-right: 50px; //padding-left: 50px;
+				}
+
+				.Button-icon {
+					margin-right: -30px; //margin-left: -30px;
+				}
+			}
+		}
+	}
+}
+
+@media @tablet {
+	//App.less
+	.Header-secondary .Search {
+		&:not(.active) input {
+			padding-left: 0; //padding-right: 0;
+		}
+	}
+
+	//sideNav.less
+	.sideNav {
+		.sideNav--horizontal();
+	}
+}
 
 @media @tablet-up {
+	//App.less
+	.Header-navigation {
+		float: right; //float: left;
+		margin-left: 25px; //margin-right: 25px;
+	}
+
+	//App.less
+	.Header-primary {
+		float: right; //float: left;
+	}
+
+	//App.less
+	.Header-title {
+		float: right; //float: left;
+		margin: 0 0 0 15px; //margin: 0 15px 0 0;
+	}
+
+	//App.less
+	.Header-secondary {
+		float: left; //float: right;
+
+		.Search {
+			margin-left: 10px; //margin-right: 10px;
+		}
+	}
+
+	//Modal.less
+	.Modal-close {
+		left: 10px; //right: 10px;
+	}
+
+	//Search.less
+	.Search {
+		.transition(margin-right 0.4s); //.transition(margin-left 0.4s);
+
+		&.focused {
+			margin-right: -400px; //margin-left: -400px;
+		}
+	}
+	
+	//sideNav.less
 	.sideNav {
 		& .Dropdown--select {
 			& .Dropdown-menu {
@@ -367,27 +438,31 @@
 	}
 }
 
-.sideNav--horizontal {
-	> ul > li, .Dropdown-menu > li {
-		margin: 0 0 0 20px; //margin: 0 20px 0 0;
+@media @desktop-hd {
+	//Navigation.less
+	.hasPane.panePinned, .hasPane.paneShowing {
+		.Navigation-back {
+			border-radius: 0 @border-radius @border-radius 0 !important; //border-radius: @border-radius 0 0 @border-radius !important;
+		}
+	
+		.Navigation-pin {
+			margin-right: 1px !important; //margin-left: 1px !important;
+		}
 	}
 
-	.Dropdown--select .Dropdown-menu > li > a {
-		padding-right: 25px; //padding-left: 25px;
-
-		.icon {
-			margin-right: -25px; //margin-left: -25px;
-		}
+	//Navigation.less
+	.hasPane.panePinned .Navigation-pin .icon {
+		.rotate(0deg); //.rotate(0deg); -> TODO: Change to RTL degrees
 	}
 }
 
 @media @desktop-up {
+	//sideNav.less
 	.sideNav {
 		float: right; //float: left;
 	}
-}
 
-@media @desktop-up {
+	//sideNav.less
 	.sideNavOffset {
 		margin-right: 240px; //margin-left: 240px;
 	}
