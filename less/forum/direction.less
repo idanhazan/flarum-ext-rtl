@@ -1,25 +1,25 @@
 //Variables
-@border-radius:			4px;
-@avatar-column-width:		85px;
-@pane-width:			400px;
-@config-secondary-color:	#536F90;
-@secondary-color:		@config-secondary-color;
-@secondary-hue:			hue(@secondary-color);
-@secondary-sat:			saturation(@secondary-color);
-@control-bg:			hsl(@secondary-hue, min(50%, @secondary-sat), 93%);
-@muted-color:			hsl(@secondary-hue, min(25%, @secondary-sat), 55%);
-@tooltip-arrow-width:		5px;
-@tooltip-bg:			rgba(0, 0, 0, 0.9);
-@screen-tablet:			768px;
-@screen-desktop:		992px;
-@screen-desktop-hd:		1100px;
-@screen-phone-max:		(@screen-tablet - 1);
-@screen-tablet-max:		(@screen-desktop - 1);
-@phone:				~"(max-width: @{screen-phone-max})";
-@tablet:			~"(min-width: @{screen-tablet}) and (max-width: @{screen-tablet-max})";
-@tablet-up:			~"(min-width: @{screen-tablet})";
-@desktop-hd:			~"(min-width: @{screen-desktop-hd})";
-@desktop-up:			~"(min-width: @{screen-desktop})";
+//@border-radius:		4px;
+//@avatar-column-width:		85px;
+//@pane-width:			400px;
+//@config-secondary-color:	#536F90;
+//@secondary-color:		@config-secondary-color;
+//@secondary-hue:		hue(@secondary-color);
+//@secondary-sat:		saturation(@secondary-color);
+//@control-bg:			hsl(@secondary-hue, min(50%, @secondary-sat), 93%);
+//@muted-color:			hsl(@secondary-hue, min(25%, @secondary-sat), 55%);
+//@tooltip-arrow-width:		5px;
+//@tooltip-bg:			rgba(0, 0, 0, 0.9);
+//@screen-tablet:		768px;
+//@screen-desktop:		992px;
+//@screen-desktop-hd:		1100px;
+//@screen-phone-max:		(@screen-tablet - 1);
+//@screen-tablet-max:		(@screen-desktop - 1);
+//@phone:			~"(max-width: @{screen-phone-max})";
+//@tablet:			~"(min-width: @{screen-tablet}) and (max-width: @{screen-tablet-max})";
+//@tablet-up:			~"(min-width: @{screen-tablet})";
+//@desktop-hd:			~"(min-width: @{screen-desktop-hd})";
+//@desktop-up:			~"(min-width: @{screen-desktop})";
 
 //lib/Alert.less
 .Alert-controls {
@@ -107,18 +107,14 @@
 		margin: 0 -15px 0 -10px; //margin: 0 -10px 0 -15px;
 	}
 
-	&.loading {
-		.Button-label {
-			margin-left: 20px; //margin-right: 20px;
-		}
+	&.loading .Button-label {
+		margin-left: 20px; //margin-right: 20px;
 	}
 }
 
 //lib/Button.less
-.SessionDropdown .Dropdown-toggle {
-	.Avatar {
-		margin: -2px -6px -2px 5px; //margin: -2px 5px -2px -6px;
-	}
+.SessionDropdown .Dropdown-toggle .Avatar {
+	margin: -2px -6px -2px 5px; //margin: -2px 5px -2px -6px;
 }
 
 //lib/Button.less
@@ -167,18 +163,16 @@
 	right: 0; //left: 0;
 	text-align: right; //text-align: left;
 
-	> li {
-		> a, > button, > span {
-			text-align: right; //text-align: left;
+	> li > a, > button, > span {
+		text-align: right; //text-align: left;
 
-			&.hasIcon {
-				padding-right: 40px; //padding-left: 40px;
-			}
+		&.hasIcon {
+			padding-right: 40px; //padding-left: 40px;
+		}
 
-			.Button-icon {
-				float: right; //float: left;
-				margin-right: -25px; //margin-left: -25px;
-			}
+		.Button-icon {
+			float: right; //float: left;
+			margin-right: -25px; //margin-left: -25px;
 		}
 	}
 }
@@ -190,19 +184,13 @@
 }
 
 //lib/Form.less
-.Form--centered {
-	.checkbox {
-		text-align: right; //text-align: left;
-	}
+.Form--centered .checkbox {
+	text-align: right; //text-align: left;
 }
 
 //lib/Modal.less
-.Modal-body {
-	.Form--centered {
-		.helpText {
-			text-align: right; //text-align: left;
-		}
-	}
+.Modal-body .Form--centered .helpText {
+	text-align: right; //text-align: left;
 }
 
 //lib/Navigation.less
@@ -217,10 +205,8 @@
 }
 
 //lib/Navigation.less
-.Navigation-drawer.new {
-	&:after {
-		left: 10px; //right: 10px;
-	}
+.Navigation-drawer.new &:after {
+	left: 10px; //right: 10px;
 }
 
 //lib/Search.less
@@ -256,10 +242,8 @@
 }
 
 //lib/Select.less
-.Select {
-	select {
-		padding-left: 30px; //padding-right: 30px;
-	}
+.Select select {
+	padding-left: 30px; //padding-right: 30px;
 }
 
 //lib/Select.less
@@ -307,8 +291,7 @@
 .checkbox {
 	padding-right: 20px; //padding-left: 20px;
 
-	input[type=checkbox],
-	input[type=radio] {
+	input[type=checkbox], input[type=radio] {
 		margin-right: -20px; //margin-left: -20px;
 		float: right; //float: left;
 	}
@@ -346,10 +329,8 @@
 }
 
 //forum/DiscussionHero.less
-.DiscussionHero {
-	.badges {
-		margin-left: 10px; //margin-right: 10px;
-	}
+.DiscussionHero .badges {
+	margin-left: 10px; //margin-right: 10px;
 }
 
 //forum/DiscussionListItem.less
@@ -368,10 +349,8 @@
 }
 
 //forum/DiscussionListItem.less
-.DiscussionListItem-info {
-	.item-terminalPost .icon {
-		margin-left: -1px; //margin-right: -1px;
-	}
+.DiscussionListItem-info .item-terminalPost .icon {
+	margin-left: -1px; //margin-right: -1px;
 }
 
 //forum/DiscussionListItem.less
@@ -398,10 +377,8 @@
 }
 
 //forum/EditUserModal.less
-.EditUserModal-groups {
-	.Badge {
-		margin: -3px 0 -3px 3px; //margin: -3px 3px -3px 0;
-	}
+.EditUserModal-groups .Badge {
+	margin: -3px 0 -3px 3px; //margin: -3px 3px -3px 0;
 }
 
 //forum/Hero.less
@@ -424,25 +401,19 @@
 }
 
 //forum/LogInButton.less
-.LogInButton {
-	.Button-icon {
-		margin-left: 5px; //margin-right: 5px;
-	}
+.LogInButton .Button-icon {
+	margin-left: 5px; //margin-right: 5px;
 }
 
 //forum/NotificationGrid.less
-.NotificationGrid-groupToggle {
-	.icon {
-		margin-left: 2px; //margin-right: 2px;
-	}
+.NotificationGrid-groupToggle .icon {
+	margin-left: 2px; //margin-right: 2px;
 }
 
 //forum/NotificationList.less
-.NotificationList-header {
-	.Button {
-		float: left; //float: right;
-		margin-left: -11px; //margin-right: -11px;
-	}
+.NotificationList-header .Button {
+	float: left; //float: right;
+	margin-left: -11px; //margin-right: -11px;
 }
 
 //forum/NotificationList.less
@@ -477,10 +448,8 @@
 }
 
 //forum/NotificationsDropdown.less
-.NotificationsDropdown {
-	& .Dropdown-toggle .Button-label {
-		margin-right: 7px; //margin-left: 7px;
-	}
+.NotificationsDropdown & .Dropdown-toggle .Button-label {
+	margin-right: 7px; //margin-left: 7px;
 }
 
 //forum/NotificationsDropdown.less
@@ -493,20 +462,14 @@
 }
 
 //forum/Post.less
-.Post-header {
-	> ul {
-		> li {
-			margin-left: 10px; //margin-right: 10px;
-		}
-	}
+.Post-header > ul > li {
+	margin-left: 10px; //margin-right: 10px;
 }
 
 //forum/Post.less
-.PostUser {
-	.UserCard {
-		right: -100px; //left: -100px;
-		transform-origin: right top; //transform-origin: left top;
-	}
+.PostUser .UserCard {
+	right: -100px; //left: -100px;
+	transform-origin: right top; //transform-origin: left top;
 }
 
 //forum/Post.less
@@ -529,21 +492,17 @@
 }
 
 //forum/Post.less
-.Post-footer {
-	.icon {
-		margin-left: 5px; //margin-right: 5px;
-	}
+.Post-footer .icon {
+	margin-left: 5px; //margin-right: 5px;
 }
 
 //forum/Post.less
 .Post-actions {
 	float: left; //float: right;
 
-	> ul {
-		> li {
-			margin-left: 0; //margin-right: 0;
-			margin-right: -5px; //margin-left: -5px;
-		}
+	> ul > li {
+		margin-left: 0; //margin-right: 0;
+		margin-right: -5px; //margin-left: -5px;
 	}
 }
 
@@ -571,13 +530,11 @@
 }
 
 //forum/Scrubber.less
-.Scrubber {
-	& a {
-		margin-right: -5px; //margin-left: -5px;
+.Scrubber & a {
+	margin-right: -5px; //margin-left: -5px;
 
-		& .fa {
-			margin-left: 2px; //margin-right: 2px;
-		}
+	& .fa {
+		margin-left: 2px; //margin-right: 2px;
 	}
 }
 
@@ -605,10 +562,8 @@
 }
 
 //forum/SettingsPage.less
-.Settings-account {
-	li {
-		margin-left: 5px; //margin-right: 5px;
-	}
+.Settings-account li {
+	margin-left: 5px; //margin-right: 5px;
 }
 
 //forum/UserCard.less
@@ -638,10 +593,8 @@
 }
 
 //forum/UserPage.less
-.UserPage {
-	.UserCard-controls {
+.UserPage .UserCard-controls {
 		float: left; //float: right;
-	}
 }
 
 @media @phone {
@@ -667,32 +620,24 @@
 	}
 
 	//lib/App.less
-	.Header-controls {
-		.FormControl, .ButtonGroup, .Button {
-			text-align: right; //text-align: left;
-		}
+	.Header-controls .FormControl, .ButtonGroup, .Button {
+		text-align: right; //text-align: left;
 	}
 
 	//lib/Dropdown.less
-	.Dropdown .Dropdown-menu {		
-		> li {
-			> a, > button {
-				&.hasIcon {
-					padding-right: 50px; //padding-left: 50px;
-				}
+	.Dropdown .Dropdown-menu > li > a, > button {
+		&.hasIcon {
+			padding-right: 50px; //padding-left: 50px;
+		}
 
-				.Button-icon {
-					margin-right: -30px; //margin-left: -30px;
-				}
-			}
+		.Button-icon {
+			margin-right: -30px; //margin-left: -30px;
 		}
 	}
 
 	//forum/Composer.less
-	.ComposerBody-content {
-		.minimized & {
-			margin-left: 50px; //margin-right: 50px;
-		}
+	.ComposerBody-content .minimized & {
+		margin-left: 50px; //margin-right: 50px;
 	}
 
 	//forum/DiscussionListItem.less
@@ -731,10 +676,8 @@
 	}
 
 	//forum/Post.less
-	.Post-header {
-		.Avatar {
-			margin-left: 5px; //margin-right: 5px;
-		}
+	.Post-header .Avatar {
+		margin-left: 5px; //margin-right: 5px;
 	}
 
 	//forum/Post.less
@@ -770,15 +713,23 @@
 
 @media @tablet {
 	//lib/App.less
-	.Header-secondary .Search {
-		&:not(.active) input {
-			padding-left: 0; //padding-right: 0;
-		}
+	.Header-secondary .Search &:not(.active) input {
+		padding-left: 0; //padding-right: 0;
 	}
 
 	//lib/sideNav.less
 	.sideNav {
-		.sideNav--horizontal();
+		> ul > li, .Dropdown-menu > li {
+			margin: 0 0 0 20px; //margin: 0 20px 0 0;
+		}
+
+		.Dropdown--select .Dropdown-menu > li > a {
+			padding-right: 25px; //padding-left: 25px;
+
+			.icon {
+				margin-right: -25px; //margin-left: -25px;
+			}
+		}
 	}
 }
 
@@ -824,18 +775,12 @@
 	}
 	
 	//lib/sideNav.less
-	.sideNav {
-		& .Dropdown--select {
-			& .Dropdown-menu {
-				& > li > a {
-					padding: 8px 30px 8px 0; //padding: 8px 0 8px 30px;
+	.sideNav & .Dropdown--select & .Dropdown-menu & > li > a {
+		padding: 8px 30px 8px 0; //padding: 8px 0 8px 30px;
 
-					& .Button-icon {
-						float: right; //float: left;
-						margin-right: -30px; //margin-left: -30px;
-					}
-				}
-			}
+		& .Button-icon {
+			float: right; //float: left;
+			margin-right: -30px; //margin-left: -30px;
 		}
 	}
 
@@ -998,17 +943,13 @@
 	}
 
 	//forum/DiscussionPage.less
-	.DiscussionPage-list {
-		.panePinned & {
-			right: 0; //left: 0;
-		}
+	.DiscussionPage-list .panePinned & {
+		right: 0; //left: 0;
 	}
 
 	//forum/DiscussionPage.less
 	.App-content, .App-footer {
-		.hasPane.panePinned & {
-			margin-right: @pane-width; //margin-left: @pane-width;
-		}
+		margin-right: @pane-width; //margin-left: @pane-width;
 	}
 }
 
