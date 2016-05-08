@@ -353,7 +353,17 @@
 
 	//lib/sideNav.less
 	.sideNav {
-		.sideNav--horizontal(); // NOTE: FIXME
+		> ul > li, .Dropdown-menu > li {
+			margin: 0 0 0 20px; //margin: 0 20px 0 0;
+		}
+
+		.Dropdown--select .Dropdown-menu > li > a {
+			padding-right: 25px; //padding-left: 25px;
+
+			.icon {
+				margin-right: -25px; //margin-left: -25px;
+			}
+		}
 	}
 }
 
