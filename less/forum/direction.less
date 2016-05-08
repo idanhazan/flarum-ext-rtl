@@ -1,13 +1,335 @@
-//AvatarEditor.less
+//Variables
+@border-radius:			4px;
+@avatar-column-width:		85px;
+@pane-width:			400px;
+@config-secondary-color:	#536F90;
+@secondary-color:		@config-secondary-color;
+@secondary-hue:			hue(@secondary-color);
+@secondary-sat:			saturation(@secondary-color);
+@control-bg:			hsl(@secondary-hue, min(50%, @secondary-sat), 93%);
+@muted-color:			hsl(@secondary-hue, min(25%, @secondary-sat), 55%);
+@tooltip-arrow-width:		5px;
+@tooltip-bg:			rgba(0, 0, 0, 0.9);
+@screen-tablet:			768px;
+@screen-desktop:		992px;
+@screen-desktop-hd:		1100px;
+@screen-phone-max:		(@screen-tablet - 1);
+@screen-tablet-max:		(@screen-desktop - 1);
+@phone:				~"(max-width: @{screen-phone-max})";
+@tablet:			~"(min-width: @{screen-tablet}) and (max-width: @{screen-tablet-max})";
+@tablet-up:			~"(min-width: @{screen-tablet})";
+@desktop-hd:			~"(min-width: @{screen-desktop-hd})";
+@desktop-up:			~"(min-width: @{screen-desktop})";
 
-@media @tablet-up {
-	.Dropdown-menu {
-		right: 35%; //left: 35%;
+//lib/Alert.less
+.Alert-controls {
+	margin: 0 8px 0 -8px; //margin: 0 -8px 0 8px;
+}
+
+//lib/AlertManager.less
+.AlertManager {
+	right: 20px; //left: 20px;
+}
+
+//lib/Button.less
+.ButtonGroup {
+	> .Button {
+		float: right; //float: left;
+
+		&:first-child:not(:last-child):not(.Dropdown-toggle) {
+			margin-right: 0; //margin-left: 0;
+			border-top-left-radius: 0; //border-top-right-radius: 0;
+			border-bottom-left-radius: 0; //border-bottom-right-radius: 0;
+		}
+
+		&:last-child:not(:first-child), &.Dropdown-toggle:not(:first-child) {
+			border-top-right-radius: 0; //border-top-left-radius: 0;
+			border-bottom-right-radius: 0; //border-bottom-left-radius: 0;
+		}
+	}
+
+	.Button + .Button {
+		margin-right: 1px; //margin-left: 1px;
 	}
 }
 
-//Composer.less
+//lib/Button.less
+.ButtonGroup {
+	> .Button {
+		float: right; //float: left;
 
+		&:first-child:not(:last-child):not(.Dropdown-toggle) {
+			margin-right: 0; //margin-left: 0;
+			border-top-left-radius: 0; //border-top-right-radius: 0;
+			border-bottom-left-radius: 0; //border-bottom-right-radius: 0;
+		}
+
+		&:last-child:not(:first-child), &.Dropdown-toggle:not(:first-child) {
+			border-top-right-radius: 0; //border-top-left-radius: 0;
+			border-bottom-right-radius: 0; //border-bottom-left-radius: 0;
+		}
+	}
+
+	.Button + .Button {
+		margin-right: 1px; //margin-left: 1px;
+	}
+}
+
+//lib/Button.less
+.ButtonGroup {
+	> .Button {
+		float: right; //float: left;
+
+		&:first-child:not(:last-child):not(.Dropdown-toggle) {
+			margin-right: 0; //margin-left: 0;
+			border-top-left-radius: 0; //border-top-right-radius: 0;
+			border-bottom-left-radius: 0; //border-bottom-right-radius: 0;
+		}
+
+		&:last-child:not(:first-child), &.Dropdown-toggle:not(:first-child) {
+			border-top-right-radius: 0; //border-top-left-radius: 0;
+			border-bottom-right-radius: 0; //border-bottom-left-radius: 0;
+		}
+	}
+
+	.Button + .Button {
+		margin-right: 1px; //margin-left: 1px;
+	}
+}
+
+//lib/Button.less
+.Button {
+	.Button-label {
+		.transition(margin-left 0.1s); //.transition(margin-right 0.1s);
+	}
+
+	.LoadingIndicator {
+		margin: 0 -15px 0 -10px; //margin: 0 -10px 0 -15px;
+	}
+
+	&.loading {
+		.Button-label {
+			margin-left: 20px; //margin-right: 20px;
+		}
+	}
+}
+
+//lib/Button.less
+.SessionDropdown .Dropdown-toggle {
+	.Avatar {
+		margin: -2px -6px -2px 5px; //margin: -2px 5px -2px -6px;
+	}
+}
+
+//lib/Button.less
+.Button-icon {
+	margin-left: 3px; //margin-right: 3px;
+}
+
+//lib/Button.less
+.Button-caret {
+	margin-right: 3px; //margin-left: 3px;
+}
+
+//lib/Button.less
+.Button-badge {
+	margin-right: 10px; //margin-left: 10px;
+}
+
+//lib/Checkbox.less
+.Checkbox--switch {
+	padding-right: 65px; //padding-left: 65px;
+
+	.Checkbox-display {
+		float: right; //float: left;
+		margin-right: -65px; //margin-left: -65px;
+
+		.LoadingIndicator {
+			margin-right: 10px; //margin-left: 10px;
+		}
+	}
+}
+
+//lib/Checkbox.less
+.Checkbox--switch .Checkbox-display {
+	&:before {
+		right: 3px; //left: 3px;
+		.transition(~"opacity 0.2s, right 0.2s"); //.transition(~"opacity 0.2s, left 0.2s");
+
+		.on& {
+			right: 25px; //left: 25px;
+		}
+	}
+}
+
+//lib/Dropdown.less
+.Dropdown-menu {
+	right: 0; //left: 0;
+	text-align: right; //text-align: left;
+
+	> li {
+		> a, > button, > span {
+			text-align: right; //text-align: left;
+
+			&.hasIcon {
+				padding-right: 40px; //padding-left: 40px;
+			}
+
+			.Button-icon {
+				float: right; //float: left;
+				margin-right: -25px; //margin-left: -25px;
+			}
+		}
+	}
+}
+
+//lib/Dropdown.less
+.Dropdown-menu--right { // NOTE: SHOULD BE CHANGE TO LEFT?
+	right: auto: //left; auto;
+	left: 0; //right: 0;
+}
+
+//lib/Form.less
+.Form--centered {
+	.checkbox {
+		text-align: right; //text-align: left;
+	}
+}
+
+//lib/Modal.less
+.Modal-body {
+	.Form--centered {
+		.helpText {
+			text-align: right; //text-align: left;
+		}
+	}
+}
+
+//lib/Navigation.less
+.Navigation-pin {
+	margin-right: -5px !important; //margin-left: -5px !important;
+	border-radius: @border-radius 0 0 @border-radius; // border-radius: 0 @border-radius @border-radius 0;
+	.transition(~"opacity 0.2s, margin-right 0.2s"); //.transition(~"opacity 0.2s, margin-left 0.2s");
+
+	.icon {
+		.rotate(45deg); //.rotate(45deg); -> TODO: Change to RTL degrees
+	}
+}
+
+//lib/Navigation.less
+.Navigation-drawer.new {
+	&:after {
+		left: 10px; //right: 10px;
+	}
+}
+
+//lib/Search.less
+.Search-results {
+	left: 0; //right: 0;
+	right: auto; //left: auto;
+
+	@media @phone {
+		right: 0; //left: 0;
+	}
+}
+
+//lib/Search.less
+.Search-input {
+	&:before {
+		float: right; //float: left;
+		margin-left: -36px; //margin-right: -36px;
+	}
+
+	input {
+		float: right; //float: left;
+	}
+
+	.Button {
+		float: right; //float: left;
+		margin-right: -36px; //margin-left: -36px;
+	}
+}
+
+//lib/Search.less
+.UserSearchResult .Avatar {
+	margin: -2px 0 -2px 10px; //margin: -2px 10px -2px 0;
+}
+
+//lib/Select.less
+.Select {
+	select {
+		padding-left: 30px; //padding-right: 30px;
+	}
+}
+
+//lib/Select.less
+.Select-caret {
+	margin-right: -30px; //margin-left: -30px;
+}
+
+//lib/Tooltip.less
+.tooltip {
+	&.right {
+		margin-right: 3px; //margin-left: 3px;
+	}
+	
+	&.left {
+		margin-right: -3px; //margin-left: -3px;
+	}
+}
+
+//lib/Tooltip.less
+.tooltip {
+	&.top .tooltip-arrow {
+		right: 50%; //left: 50%;
+		margin-right: -@tooltip-arrow-width; //margin-left: -@tooltip-arrow-width;
+	}
+
+	&.right .tooltip-arrow {
+		right: 0; //left: 0;
+		border-width: @tooltip-arrow-width 0 @tooltip-arrow-width @tooltip-arrow-width; //border-width: @tooltip-arrow-width @tooltip-arrow-width @tooltip-arrow-width 0;
+		border-left-color: @tooltip-bg; //border-right-color: @tooltip-bg;
+	}
+
+	&.left .tooltip-arrow {
+		left: 0; //right: 0;
+		border-width: @tooltip-arrow-width @tooltip-arrow-width @tooltip-arrow-width 0; //border-width: @tooltip-arrow-width 0 @tooltip-arrow-width @tooltip-arrow-width;
+		border-right-color: @tooltip-bg; //border-left-color: @tooltip-bg;
+	}
+
+	&.bottom .tooltip-arrow {
+		right: 50%; //left: 50%;
+		margin-right: -@tooltip-arrow-width; //margin-left: -@tooltip-arrow-width;
+	}
+}
+
+//lib/scaffolding.less
+.checkbox {
+	padding-right: 20px; //padding-left: 20px;
+
+	input[type=checkbox],
+	input[type=radio] {
+		margin-right: -20px; //margin-left: -20px;
+		float: right; //float: left;
+	}
+}
+
+//lib/sideNav.less
+.sideNav--horizontal {
+	> ul > li, .Dropdown-menu > li {
+		margin: 0 0 0 20px; //margin: 0 20px 0 0;
+	}
+
+	.Dropdown--select .Dropdown-menu > li > a {
+		padding-right: 25px; //padding-left: 25px;
+
+		.icon {
+			margin-right: -25px; //margin-left: -25px;
+		}
+	}
+}
+
+//forum/Composer.less
 .ComposerBody-header {
 	> li {
 		margin-left: -4px; //margin-right: -4px;
@@ -18,75 +340,24 @@
 	}
 }
 
+//forum/Composer.less
 .Composer-controls {
 	left: 10px; //right: 10px;
 }
 
-@media @phone {
-	.ComposerBody-content {
-		.minimized & {
-			margin-left: 50px; //margin-right: 50px;
-		}
-	}
-}
-
-@media @tablet-up {
-	.ComposerBody-avatar {
-		float: left; //float: left;
-	}
-	.ComposerBody-content {
-		margin-right: 85px; //margin-left: 85px;
-		
-		.minimized &, .fullScreen & {
-			margin-right: 0; //margin-left: 0;
-		}
-	}
-}
-
-@media @desktop-up {
-	.Composer:not(.fullScreen) {
-		.App--index & {
-			margin-left: -20px; //margin-right: -20px;
-			margin-right: 220px; //margin-left: 220px;
-			
-		}
-		
-		.App--discussion & {
-			margin-left: 205px; //margin-right: 205px;
-			margin-right: -20px; //margin-left: -20px;
-		}
-	}
-}
-
-@media @desktop-hd {
-	.hasPane.panePinned .App-composer {
-		right: @pane-width; //left: @pane-width;
-	}
-}
-
-@media @tablet-up {
-	.TextEditor-controls {
-		margin: 0 -105px 0 -20px; //margin: 0 -20px 0 -105px;
-		
-		li {
-			margin-left: 5px; //margin-right: 5px;
-		}
-}
-
-//DiscussionHero.less
-
+//forum/DiscussionHero.less
 .DiscussionHero {
 	.badges {
 		margin-left: 10px; //margin-right: 10px;
 	}
 }
 
-//DiscussionListItem.less
-
+//forum/DiscussionListItem.less
 .DiscussionListItem-author {
 	float: right; //float: left;
 }
 
+//forum/DiscussionListItem.less
 .DiscussionListItem-badges {
 	float: right; //float: left;
 	text-align: left; //text-align: right;
@@ -96,20 +367,23 @@
 	}
 }
 
+//forum/DiscussionListItem.less
 .DiscussionListItem-info {
 	.item-terminalPost .icon {
 		margin-left: -1px; //margin-right: -1px;
 	}
 }
 
+//forum/DiscussionListItem.less
 .DiscussionListItem-count {
 	float: left; //float: right;
 }
 
+//forum/DiscussionListItem.less
 .DiscussionListItem-relevantPosts {
 	@media @phone {
-		margin-left: -35px; //margin-right: -35px;
 		margin-right: -45px; //margin-left: -45px;
+		margin-left: -35px; //margin-right: -35px;
 	}
 	
 	.PostPreview {
@@ -123,173 +397,47 @@
 	}
 }
 
-@media @phone {
-	.DiscussionListItem-content {
-		padding-left: 15px + 35px; //padding-right: 15px + 35px;
-		padding-right: 15px + 45px; //padding-left: 15px + 45px;
-	}
-	
-	.DiscussionListItem-author {
-		margin-right: -45px; //margin-left: -45px;
-	}
-	
-	.DiscussionListItem-badges {
-		margin-right: -45px; //margin-left: -45px;
-		
-		.badge {
-			margin-right: -13px; //margin-left: -13px;
-		}
-	}
-	
-	.DiscussionListItem-main {
-		margin-left: -45px; //margin-right: -45px;
-	}
-	
-	.DiscussionListItem-count {
-		margin-left: -35px; //margin-right: -35px;
-	}
-}
-
-@media @tablet-up {
-	.DiscussionListItem {
-		margin-right: -15px; //margin-left: -15px;
-		padding-right: 15px; //padding-left: 15px;
-		padding-left: 25px; //padding-right: 25px;
-		margin-left: -15px; //margin-right: -15px;
-	}
-	
-	.DiscussionListItem-controls {
-		left: 5px; //right: 5px;
-		
-		.Dropdown-menu {
-			right: auto; //left: auto;
-			left: 0; //right: 0;
-		}
-	}
-	
-	.DiscussionListItem-content {
-		padding-left: 80px; // padding-right: 80px;
-		padding-right: 52px; //padding-left: 52px;
-	}
-	
-	.DiscussionListItem-author {
-		margin-right: -52px; //margin-left: -52px;
-	}
-	
-	.DiscussionListItem-badges {
-		margin-right: -55px; //margin-left: -55px;
-	}
-	
-	.DiscussionListItem-main {
-		margin-left: -65px; //margin-right: -65px;
-	}
-	
-	.DiscussionListItem-count {
-		margin-left: -70px; //margin-right: -70px;
-		padding-right: 21px; //padding-left: 21px;
-		
-		&:before {
-			float: right; //float: left;
-			margin-right: -21px; //margin-left: -21px;
-		}
-	}
-}
-
-//DiscussionPage.less
-
-@media @tablet-up {
-	.DiscussionPage-nav {
-		float: left; //float: right;
-	}
-}
-
-@media @tablet-up {
-	.DiscussionPage-stream {
-		margin-left: 225px; //margin-right: 225px;
-	}
-}
-
-@media @tablet-up {
-	.DiscussionPage-list {
-		right: -@pane-width - 6px; //left: -@pane-width - 6px;
-		.transition(right 0.2s); //.transition(left 0.2s);
-
-		.paneShowing & {
-			right: 0; //left: 0;
-		}
-
-		.DiscussionListItem-content {
-			padding-left: 65px + 15px; //padding-right: 65px + 15px;
-			padding-right: 52px + 15px; //padding-left: 52px + 15px;
-		}
-
-		.DiscussionListItem-relevantPosts {
-			margin-left: -65px; //margin-right: -65px;
-			margin-right: -52px; //margin-left: -52px;
-		}
-	}
-}
-
-@media @desktop-hd {
-	.DiscussionPage-list {
-		.panePinned & {
-			right: 0; //left: 0;
-		}
-	}
-
-	.App-content, .App-footer {
-		.hasPane.panePinned & {
-			margin-right: @pane-width; //margin-left: @pane-width;
-		}
-	}
-}
-
-//EditUserModal.less
-
+//forum/EditUserModal.less
 .EditUserModal-groups {
 	.Badge {
 		margin: -3px 0 -3px 3px; //margin: -3px 3px -3px 0;
 	}
 }
 
-//Hero.less
-
+//forum/Hero.less
 .Hero-close {
 	float: left; //float: right;
 }
 
-//IndexPage.less
-
+//forum/IndexPage.less
 .IndexPage-toolbar-view > li {
 	margin-left: 5px; //margin-right: 5px;
 }
 
+//forum/IndexPage.less
 .IndexPage-toolbar-action {
 	float: left; //float: right;
 
 	> li {
-		margin-left: 5px; //margin-left: 5px;
+		margin-right: 5px; //margin-left: 5px;
 	}
 }
 
-//LogInButton.less
-
+//forum/LogInButton.less
 .LogInButton {
 	.Button-icon {
 		margin-left: 5px; //margin-right: 5px;
 	}
 }
 
-//NotificationGrid.less
-
+//forum/NotificationGrid.less
 .NotificationGrid-groupToggle {
 	.icon {
 		margin-left: 2px; //margin-right: 2px;
 	}
 }
 
-//NotificationList.less
-
+//forum/NotificationList.less
 .NotificationList-header {
 	.Button {
 		float: left; //float: right;
@@ -297,41 +445,45 @@
 	}
 }
 
+//forum/NotificationList.less
 .NotificationGroup-badges {
-	margin-left: 18px; //margin-right: 18px;
 	margin-right: -2px; //margin-left: -2px;
+	margin-left: 18px; //margin-right: 18px;
 
 	.Badge {
 		margin-left: -13px; //margin-right: -13px;
 	}
 }
 
+//forum/NotificationList.less
 .Notification {
 	padding: 8px 70px 8px 15px; //padding: 8px 15px 8px 70px;
 
 	.Avatar {
 		float: right; //float: left;
-		margin: -2px -2px 0 -55px; //margin: -2px 0 -2px -55px;
+		margin: -2px -55px -2px 0; //margin: -2px 0 -2px -55px;
 	}
 }
 
+//forum/NotificationList.less
 .Notification-icon {
 	float: right; //float: left;
 	margin-right: -23px; //margin-left: -23px;
 }
 
+//forum/NotificationList.less
 .Notification-content {
 	margin-left: 5px; //margin-right: 5px;
 }
 
-//NotificationsDropdown.less
-
+//forum/NotificationsDropdown.less
 .NotificationsDropdown {
 	& .Dropdown-toggle .Button-label {
 		margin-right: 7px; //margin-left: 7px;
 	}
 }
 
+//forum/NotificationsDropdown.less
 .NotificationsDropdown-unread {
 	right: 17px; //left: 17px;
 
@@ -340,8 +492,7 @@
 	}
 }
 
-//Post.less
-
+//forum/Post.less
 .Post-header {
 	> ul {
 		> li {
@@ -350,12 +501,15 @@
 	}
 }
 
+//forum/Post.less
 .PostUser {
 	.UserCard {
 		right: -100px; //left: -100px;
+		transform-origin: right top; //transform-origin: left top;
 	}
 }
 
+//forum/Post.less
 .PostUser-badges {
 	text-align: left; //text-align: right;
 
@@ -364,31 +518,36 @@
 	}
 }
 
+//forum/Post.less
 .PostMeta-time {
 	margin-right: 5px; //margin-left: 5px;
 }
 
+//forum/Post.less
 .EventPost-icon {
 	float: right; //float: left;
 }
 
+//forum/Post.less
 .Post-footer {
 	.icon {
 		margin-left: 5px; //margin-right: 5px;
 	}
 }
 
+//forum/Post.less
 .Post-actions {
 	float: left; //float: right;
 
 	> ul {
 		> li {
-			margin-right: -5px; //margin-left: -5px;
 			margin-left: 0; //margin-right: 0;
+			margin-right: -5px; //margin-left: -5px;
 		}
 	}
 }
 
+//forum/Post.less
 .PostPreview {
 	padding-right: 50px; //padding-left: 50px;
 
@@ -406,60 +565,12 @@
 	}
 }
 
-@media @phone {
-	.Post-header {
-		.Avatar {
-			margin-left: 5px; //margin-right: 5px;
-		}
-	}
-
-	.PostUser-badges {
-		right: 6px; //left: 6px;
-
-		.Badge {
-			margin-right: -13px; //margin-left: -13px;
-		}
-	}
-
-	.EventPost {
-		padding-right: 50px; //padding-left: 50px;
-	}
-
-	.EventPost-icon {
-		margin-right: -30px; //margin-left: -30px;
-	}
+//forum/PostStream.less
+.PostStream-timeGap {
+	padding: 20px @avatar-column-width 20px 20px; //padding: 20px 20px 20px @avatar-column-width;
 }
 
-@media @tablet-up {
-	.Post {
-		padding-right: 20px + @avatar-column-width; //padding-left: 20px + @avatar-column-width;
-	}
-
-	.PostUser-avatar {
-		right: -@avatar-column-width; //left: -@avatar-column-width;
-	}
-
-	.PostUser-badges {
-		float: right; //float: left;
-		margin-right: -@avatar-column-width + 5px; //margin-left: -@avatar-column-width + 5px;
-	}
-
-	.EventPost-icon {
-		text-align: left; //text-align: right;
-		margin-right: -@avatar-column-width; //margin-left: -@avatar-column-width;
-	}
-}
-
-//PostStream.less (The original in a comment)
-
-//.item.highlight .post {
-//	&:before {
-//		right: -30px; //left: -30px;
-//	}
-// }
-
-//Scrubber.less
-
+//forum/Scrubber.less
 .Scrubber {
 	& a {
 		margin-right: -5px; //margin-left: -5px;
@@ -470,58 +581,47 @@
 	}
 }
 
+//forum/Scrubber.less
 .Scrubber-scrollbar {
 	margin: 8px 3px 8px 0; //margin: 8px 0 8px 3px;
 }
 
+//forum/Scrubber.less
 .Scrubber-unread {
 	border-right: 1px solid lighten(@muted-color, 10%); //border-left: 1px solid lighten(@muted-color, 10%);
 	background-image: linear-gradient(to left, @control-bg, fade(@control-bg, 0) 10px, fade(@control-bg, 0)); //background-image: linear-gradient(to right, @control-bg, fade(@control-bg, 0) 10px, fade(@control-bg, 0));
 	padding-right: 13px; //padding-left: 13px;
 }
 
+//forum/Scrubber.less
 .Scrubber-bar {
 	float: right; //float: left;
 	margin-right: -2px; //margin-left: -2px;
 }
 
+//forum/Scrubber.less
 .Scrubber-info {
 	right: 15px; //left: 15px;
 }
 
-//SettingsPage.less
-
+//forum/SettingsPage.less
 .Settings-account {
 	li {
 		margin-left: 5px; //margin-right: 5px;
 	}
 }
 
-//Slidable.less
-
-@media @phone {
-	.Slidable {
-		.Slidable-underneath {
-			text-align: left; //text-align: right;
-		}
-
-		.Slidable-underneath--right { //.Slidable-underneath--left {
-			text-align: right; //text-align: left;
-		}
-	}
-}
-
-//UserCard.less
-
+//forum/UserCard.less
 .UserCard-controls {
 	float: left; //float: right;
 
 	.Dropdown-menu {
-		left: 0; //right: 0;
 		right: auto; //left: auto;
+		left: 0; //right: 0;
 	}
 }
 
+//forum/UserCard.less
 .UserCard-profile {
 	text-align: right; //text-align: left;
 	padding-right: 130px; //padding-left: 130px;
@@ -531,15 +631,408 @@
 	}
 }
 
+//forum/UserCard.less
 .UserCard-avatar {
 	float: right; //float: left;
 	margin-right: -130px; //margin-left: -130px;
 }
 
-//UserPage.less
-
+//forum/UserPage.less
 .UserPage {
 	.UserCard-controls {
 		float: left; //float: right;
+	}
+}
+
+@media @phone {
+	//lib/App.less
+	.App-primaryControl {
+		left: 0; //right: 0;
+	}
+
+	//lib/App.less
+	.App-titleControl {
+		right: 50%; //left: 50%;
+		margin-right: -100px; //margin-left: -100px;
+	}
+
+	//lib/App.less
+	.App-backControl {
+		right: 0; //left: 0;
+	}
+
+	//lib/App.less
+	.App-drawer {
+		right: 0; //left: 0;
+	}
+
+	//lib/App.less
+	.Header-controls {
+		.FormControl, .ButtonGroup, .Button {
+			text-align: right; //text-align: left;
+		}
+	}
+
+	//lib/Dropdown.less
+	.Dropdown .Dropdown-menu {		
+		> li {
+			> a, > button {
+				&.hasIcon {
+					padding-right: 50px; //padding-left: 50px;
+				}
+
+				.Button-icon {
+					margin-right: -30px; //margin-left: -30px;
+				}
+			}
+		}
+	}
+
+	//forum/Composer.less
+	.ComposerBody-content {
+		.minimized & {
+			margin-left: 50px; //margin-right: 50px;
+		}
+	}
+
+	//forum/DiscussionListItem.less
+	.DiscussionListItem-content {
+		padding-right: 15px + 45px; //padding-left: 15px + 45px;
+		padding-left: 15px + 35px; //padding-right: 15px + 35px;
+	}
+
+	//forum/DiscussionListItem.less
+	.DiscussionListItem-author {
+		margin-right: -45px; //margin-left: -45px;
+	}
+
+	//forum/DiscussionListItem.less
+	.DiscussionListItem-badges {
+		margin-right: -45px; //margin-left: -45px;
+		
+		.badge {
+			margin-right: -13px; //margin-left: -13px;
+		}
+	}
+
+	//forum/DiscussionListItem.less
+	.DiscussionListItem-main {
+		margin-left: -45px; //margin-right: -45px;
+	}
+
+	//forum/DiscussionListItem.less
+	.DiscussionListItem-count {
+		margin-left: -35px; //margin-right: -35px;
+	}
+
+	//forum/Hero.less
+	.Hero-close {
+		margin-left: -10px; //margin-right: -10px;
+	}
+
+	//forum/Post.less
+	.Post-header {
+		.Avatar {
+			margin-left: 5px; //margin-right: 5px;
+		}
+	}
+
+	//forum/Post.less
+	.PostUser-badges {
+		right: 6px; //left: 6px;
+
+		.Badge {
+			margin-right: -13px; //margin-left: -13px;
+		}
+	}
+
+	//forum/Post.less
+	.EventPost {
+		padding-right: 50px; //padding-left: 50px;
+	}
+
+	//forum/Post.less
+	.EventPost-icon {
+		margin-right: -30px; //margin-left: -30px;
+	}
+
+	//forum/Slidable.less
+	.Slidable {
+		.Slidable-underneath {
+			text-align: left; //text-align: right;
+		}
+
+		.Slidable-underneath--left { // NOTE: SHOULD BE CHANGE TO RIGHT?
+			text-align: right; //text-align: left;
+		}
+	}
+}
+
+@media @tablet {
+	//lib/App.less
+	.Header-secondary .Search {
+		&:not(.active) input {
+			padding-left: 0; //padding-right: 0;
+		}
+	}
+
+	//lib/sideNav.less
+	.sideNav {
+		.sideNav--horizontal();
+	}
+}
+
+@media @tablet-up {
+	//lib/App.less
+	.Header-navigation {
+		float: right; //float: left;
+		margin-left: 25px; //margin-right: 25px;
+	}
+
+	//lib/App.less
+	.Header-primary {
+		float: right; //float: left;
+	}
+
+	//lib/App.less
+	.Header-title {
+		float: right; //float: left;
+		margin: 0 0 0 15px; //margin: 0 15px 0 0;
+	}
+
+	//lib/App.less
+	.Header-secondary {
+		float: left; //float: right;
+
+		.Search {
+			margin-left: 10px; //margin-right: 10px;
+		}
+	}
+
+	//lib/Modal.less
+	.Modal-close {
+		left: 10px; //right: 10px;
+	}
+
+	//lib/Search.less
+	.Search {
+		.transition(margin-right 0.4s); //.transition(margin-left 0.4s);
+
+		&.focused {
+			margin-right: -400px; //margin-left: -400px;
+		}
+	}
+	
+	//lib/sideNav.less
+	.sideNav {
+		& .Dropdown--select {
+			& .Dropdown-menu {
+				& > li > a {
+					padding: 8px 30px 8px 0; //padding: 8px 0 8px 30px;
+
+					& .Button-icon {
+						float: right; //float: left;
+						margin-right: -30px; //margin-left: -30px;
+					}
+				}
+			}
+		}
+	}
+
+	//forum/AvatarEditor.less
+	.Dropdown-menu {
+		right: 35%; //left: 35%;
+	}
+
+	//forum/Composer.less
+	.App-composer {
+		.transition(right 0.2s); //.transition(left 0.2s);
+	}
+
+	//forum/Composer.less
+	.ComposerBody-avatar {
+		float: right; //float: left;
+	}
+
+	//forum/Composer.less
+	.ComposerBody-content {
+		margin-right: 85px; //margin-left: 85px;
+		
+		.minimized &, .fullScreen & {
+			margin-right: 0; //margin-left: 0;
+		}
+	}
+
+	//forum/Composer.less
+	.TextEditor-controls {
+		margin: 0 -105px 0 -20px; //margin: 0 -20px 0 -105px;
+		
+		li {
+			margin-left: 5px; //margin-right: 5px;
+		}
+	}
+
+	//forum/DiscussionListItem.less
+	.DiscussionListItem {
+		margin-left: -15px; //margin-right: -15px;
+		padding-left: 25px; //padding-right: 25px;
+		padding-right: 15px; //padding-left: 15px;
+		margin-right: -15px; //margin-left: -15px;
+	}
+
+	//forum/DiscussionListItem.less
+	.DiscussionListItem-controls {
+		left: 5px; //right: 5px;
+		
+		.Dropdown-menu {
+			left: 0; //right: 0;
+			right: auto; //left: auto;
+		}
+	}
+
+	//forum/DiscussionListItem.less
+	.DiscussionListItem-content {
+		padding-right: 52px; //padding-left: 52px;
+		padding-left: 80px; //padding-right: 80px;
+	}
+
+	//forum/DiscussionListItem.less
+	.DiscussionListItem-author {
+		margin-right: -52px; //margin-left: -52px;
+	}
+
+	//forum/DiscussionListItem.less
+	.DiscussionListItem-badges {
+		margin-right: -55px; //margin-left: -55px;
+	}
+
+	//forum/DiscussionListItem.less
+	.DiscussionListItem-main {
+		margin-left: -65px; //margin-right: -65px;
+	}
+
+	//forum/DiscussionListItem.less
+	.DiscussionListItem-count {
+		margin-left: -70px; //margin-right: -70px;
+		padding-right: 21px; //padding-left: 21px;
+		
+		&:before {
+			float: right; //float: left;
+			margin-right: -21px; //margin-left: -21px;
+		}
+	}
+
+	//forum/DiscussionPage.less
+	.DiscussionPage-nav {
+		float: left; //float: right;
+	}
+
+	//forum/DiscussionPage.less
+	.DiscussionPage-stream {
+		margin-left: 225px; //margin-right: 225px;
+	}
+
+	//forum/DiscussionPage.less
+	.DiscussionPage-list {
+		right: -@pane-width - 6px; //left: -@pane-width - 6px;
+		.transition(right 0.2s); //.transition(left 0.2s);
+
+		.paneShowing & {
+			right: 0; //left: 0;
+		}
+
+		.DiscussionListItem-content {
+			padding-right: 52px + 15px; //padding-left: 52px + 15px;
+			padding-left: 65px + 15px; //padding-right: 65px + 15px;
+		}
+
+		.DiscussionListItem-relevantPosts {
+			margin-right: -52px; //margin-left: -52px;
+			margin-left: -65px; //margin-right: -65px;
+		}
+	}
+
+	//forum/Post.less
+	.Post {
+		padding-right: 20px + @avatar-column-width; //padding-left: 20px + @avatar-column-width;
+	}
+
+	//forum/Post.less
+	.PostUser-avatar {
+		right: -@avatar-column-width; //left: -@avatar-column-width;
+	}
+
+	//forum/Post.less
+	.PostUser-badges {
+		float: right; //float: left;
+		margin-right: -@avatar-column-width + 5px; //margin-left: -@avatar-column-width + 5px;
+	}
+
+	//forum/Post.less
+	.EventPost-icon {
+		text-align: left; //text-align: right;
+		margin-right: -@avatar-column-width; //margin-left: -@avatar-column-width;
+	}
+}
+
+@media @desktop-hd {
+	//lib/Navigation.less
+	.hasPane.panePinned, .hasPane.paneShowing {
+		.Navigation-back {
+			border-radius: 0 @border-radius @border-radius 0 !important; //border-radius: @border-radius 0 0 @border-radius !important;
+		}
+	
+		.Navigation-pin {
+			margin-right: 1px !important; //margin-left: 1px !important;
+		}
+	}
+
+	//lib/Navigation.less
+	.hasPane.panePinned .Navigation-pin .icon {
+		.rotate(0deg); //.rotate(0deg); -> TODO: Change to RTL degrees
+	}
+
+	//forum/Composer.less
+	.hasPane.panePinned .App-composer {
+		right: @pane-width; //left: @pane-width;
+	}
+
+	//forum/DiscussionPage.less
+	.DiscussionPage-list {
+		.panePinned & {
+			right: 0; //left: 0;
+		}
+	}
+
+	//forum/DiscussionPage.less
+	.App-content, .App-footer {
+		.hasPane.panePinned & {
+			margin-right: @pane-width; //margin-left: @pane-width;
+		}
+	}
+}
+
+@media @desktop-up {
+	//lib/sideNav.less
+	.sideNav {
+		float: right; //float: left;
+	}
+
+	//lib/sideNav.less
+	.sideNavOffset {
+		margin-right: 240px; //margin-left: 240px;
+	}
+
+	//forum/Composer.less
+	.Composer:not(.fullScreen) {
+		.App--index & {
+			margin-right: 220px; //margin-left: 220px;
+			margin-left: -20px; //margin-right: -20px;
+		}
+		
+		.App--discussion & {
+			margin-right: -20px; //margin-left: -20px;
+			margin-left: 205px; //margin-right: 205px;
+		}
 	}
 }
