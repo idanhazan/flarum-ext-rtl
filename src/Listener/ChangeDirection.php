@@ -14,7 +14,7 @@ class ChangeDirection
     
     public function addAssets(ConfigureClientView $event)
     {
-    	$event->addAssets([__DIR__ . '/../../less/lib/direction.less']);
+    	//$event->addAssets([__DIR__ . '/../../less/lib/direction.less']);
     	
         if ($event->isForum()) {
 		//$event->addAssets([__DIR__ . '/../../less/forum/rtl.less']);
