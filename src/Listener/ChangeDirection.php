@@ -16,7 +16,6 @@ class ChangeDirection
     {
         if ($event->isForum()) {
 		$event->addAssets([__DIR__ . '/../../less/forum-rtl.less']);
-		
         }
         else if($event->isAdmin()) {
 		$event->addAssets([__DIR__ . '/../../less/admin-rtl.less']);
