@@ -1,0 +1,32 @@
+@media (min-width: 768px) {
+	.Post-flagged {
+		margin-left: auto !important;
+		margin-right: -107px;
+	}
+}
+
+.Post-flagged-flags {
+	text-align: right !important;
+}
+
+@media (min-width: 768px) {
+	.Post-flagged-flags {
+		float: right !important;
+	}
+}
+
+.Post-flagged-detail {
+	margin-left: auto !important;
+	margin-right: 10px;
+}
+
+@media (min-width: 768px) {
+	.Post-flagged-actions {
+		float: left !important;
+	}
+}
+
+.Post-flagged-actions .Button {
+	margin-left: auto !important;
+	margin-right: 5px;
+}
