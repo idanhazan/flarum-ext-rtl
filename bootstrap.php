@@ -1,9 +1,9 @@
 <?php
 
-use Flagrow\RTL\Listener;
-use Flarum\Event\ConfigureClientView;
+namespace Flagrow\RTL;
+
 use Illuminate\Contracts\Events\Dispatcher;
 
 return function (Dispatcher $events) {
-	$events->subscribe(Listener\ChangeDirection::class);
+	$events->subscribe(Listener\RTLClientView::class);
 };
