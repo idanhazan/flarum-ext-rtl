@@ -1,0 +1,78 @@
+@media (min-width: 992px) and (max-width: 1099px), (min-width: 1100px) {
+	.App-content .sideNavOffset {
+		margin-left: auto;
+		margin-right: 300px;
+	}
+
+	.App-nav .AdminNav .Dropdown-menu > li > a {
+		padding: 15px 45px 15px 15px;
+	}
+
+	.App-nav .AdminNav .Button-icon {
+		float: right;
+		margin-left: auto;
+		margin-right: -30px;
+	}
+}
+
+.Group--add {
+	margin-left: auto;
+	margin-right: 10px;
+}
+
+.PermissionGrid td,
+.PermissionGrid th {
+	text-align: right;
+}
+
+.PermissionGrid tbody th {
+	padding-right: 0;
+	padding-left: 50px;
+}
+
+.PermissionGrid tbody th .icon {
+	margin-right: auto;
+	margin-left: 5px;
+}
+
+.PermissionGrid tbody .Dropdown .Dropdown-toggle {
+	text-align: right;
+}
+
+.PermissionDropdown .Badge {
+	margin: -3px 0 -3px 3px;
+}
+
+.EditGroupModal .Badge {
+	margin-right: auto;
+	margin-left: 5px;
+}
+
+.EditGroupModal-delete {
+	float: left;
+}
+
+.ExtensionList > li {
+	float: right;
+	text-align: right;
+}
+
+.ExtensionListItem {
+	margin-right: auto;
+	margin-left: 15px;
+}
+
+.ExtensionListItem-controls {
+	float: left;
+	margin-right: auto;
+	margin-left: -5px;
+}
+
+.AppearancePage-colors-input input {
+	float: right;
+}
+
+.AppearancePage-colors-input input:first-child {
+	margin-right: auto;
+	margin-left: 2%;
+}
