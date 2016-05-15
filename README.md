@@ -3,7 +3,7 @@
 RTL extension useful for Arabic and Hebrew languages.
 
 ### Version
-1.0
+0.1.0
 
 ### Installation
 
