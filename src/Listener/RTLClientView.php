@@ -9,16 +9,16 @@ class ChangeDirection
 {
     public function subscribe(Dispatcher $events)
     {
-        $events->listen(ConfigureClientView::class, [$this, 'addAssets']);
+        $events->listen(ConfigureClientView::class, [$this, 'rtlClientView']);
     }
     
-    public function addAssets(ConfigureClientView $event)
+    public function rtlClientView(ConfigureClientView $event)
     {
         if ($event->isForum()) {
-		$event->addAssets([__DIR__ . '/../../less/forum-rtl.less']);
+		$event->addAssets([__DIR__ . '/../../less/forum/extension.less']);
         }
         else if($event->isAdmin()) {
-		$event->addAssets([__DIR__ . '/../../less/admin-rtl.less']);
+		$event->addAssets([__DIR__ . '/../../less/admin/extension.less']);
         }
     }
 }
