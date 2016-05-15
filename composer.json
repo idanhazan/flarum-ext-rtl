@@ -1,11 +1,9 @@
 {
 	"name": "hazanpro/flarum-ext-rtl",
 	"description": "Flarum's RTL Extension",
-	"version": "0.1.0-beta.5",
 	"type": "flarum-extension",
-	"keywords": ["flarum", "flagrow", "rtl"],
+	"keywords": ["flarum", "flagrow", "rtl", "extension"],
 	"homepage": "http://flagrow.github.io/",
-	"time": "2016-05-07",
 	"license": "MIT",
 
 	"require": {
@@ -22,7 +20,7 @@
 		"flarum-extension": {
 			"title": "RTL",
 			"icon": {
-				"name": "chevron-circle-left",
+				"name": "hand-o-left",
 				"backgroundColor": "#000000",
 				"color": "#ffffff"
 			}
