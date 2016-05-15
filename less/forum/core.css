@@ -1,0 +1,562 @@
+@media (min-width: 768px) {
+	.AvatarEditor .Dropdown-menu {
+		left: auto;
+		right: 35%;
+	}
+}
+
+.ComposerBody-header > li {
+	margin-right: auto;
+	margin-left: -4px;
+}
+
+.ComposerBody-header h3 input,
+.ComposerBody-header h3 input[disabled],
+.ComposerBody-header h3 input:focus {
+	padding: 0 0 0 20px;
+}
+
+.Composer-controls {
+	right: auto;
+	left: 10px;
+}
+
+@media (max-width: 767px) {
+	.minimized .ComposerBody-content {
+		margin-right: auto;
+		margin-left: 50px;
+	}
+}
+
+@media (min-width: 768px) {
+	.App-composer {
+		-webkit-transition: right 0.2s;
+		-o-transition: right 0.2s;
+		transition: right 0.2s;
+	}
+
+	.ComposerBody-avatar {
+		float: right;
+	}
+
+	.ComposerBody-content {
+		margin-left: auto;
+		margin-right: 90px;
+	}
+
+	.minimized .ComposerBody-content,
+	.fullScreen .ComposerBody-content {
+		margin-left: auto;
+		margin-right: 0;
+	}
+}
+
+@media (min-width: 992px) {
+	.App--index .Composer:not(.fullScreen) {
+		margin-right: 205px;
+		margin-left: -20px;
+	}
+
+	.App--discussion .Composer:not(.fullScreen) {
+		margin-right: -20px;
+		margin-left: 205px;
+	}
+}
+
+@media (min-width: 1100px) {
+	.hasPane.panePinned .App-composer {
+		left: auto;
+		right: 400px;
+	}
+}
+
+@media (min-width: 768px) {
+	.TextEditor-controls {
+		margin: 0 -110px 0 -20px;
+	}
+
+	.TextEditor-controls li {
+		margin-right: auto;
+		margin-left: 5px;
+	}
+}
+
+.DiscussionHero .badges {
+	margin-right: auto;
+	margin-left: 10px;
+}
+
+.DiscussionListItem-author {
+	float: right;
+}
+
+.DiscussionListItem-badges {
+	float: right;
+	text-align: left;
+}
+
+.DiscussionListItem-badges .Badge {
+	margin-left: auto;
+	margin-right: -10px;
+}
+
+.DiscussionListItem-info .item-terminalPost .icon {
+	margin-right: auto;
+	margin-left: -1px;
+}
+
+.DiscussionListItem-count {
+	float: left;
+}
+
+@media (max-width: 767px) {
+	.DiscussionListItem-relevantPosts {
+		margin-right: -45px;
+		margin-left: -35px;
+	}
+}
+
+.DiscussionListItem-relevantPosts .PostPreview .PostPreview-content {
+	padding-left: 0; /* CHECK: NOT CHANGED */
+	padding-right: 0;
+}
+
+@media (max-width: 767px) {
+	.DiscussionListItem-content {
+		padding-right: 60px;
+		padding-left: 50px;
+	}
+
+	.DiscussionListItem-author {
+		margin-left: auto;
+		margin-right: -45px;
+	}
+
+	.DiscussionListItem-badges {
+		margin-left: auto;
+		margin-right: -45px;
+	}
+
+	.DiscussionListItem-badges .badge {
+		margin-left: auto;
+		margin-right: -13px;
+	}
+
+	.DiscussionListItem-main {
+		margin-right: auto;
+		margin-left: -45px;
+	}
+
+	.DiscussionListItem-count {
+		margin-right: auto;
+		margin-left: -35px;
+	}
+}
+
+@media (min-width: 768px) {
+	.DiscussionListItem {
+		padding-left: 25px;
+		padding-right: 15px;
+	}
+
+	.DiscussionListItem-controls {
+		right: auto;
+		left: 5px;
+	}
+
+	.DiscussionListItem-controls .Dropdown-menu {
+		left: 0;
+		right: auto;
+	}
+
+	.DiscussionListItem-content {
+		padding-right: 52px;
+		padding-left: 80px;
+	}
+
+	.DiscussionListItem-author {
+		margin-left: auto;
+		margin-right: -52px;
+	}
+
+	.DiscussionListItem-badges {
+		margin-left: auto;
+		margin-right: -55px;
+	}
+
+	.DiscussionListItem-main {
+		margin-right: auto;
+		margin-left: -65px;
+	}
+
+	.DiscussionListItem-count {
+		margin-right: auto;
+		margin-left: -70px;
+		padding-left: 0;
+		padding-right: 21px;
+	}
+
+	.DiscussionListItem-count:before {
+		float: right;
+		margin-left: auto;
+		margin-right: -21px;
+	}
+}
+
+@media (min-width: 768px) {
+	.DiscussionPage-nav {
+		float: left;
+	}
+}
+
+@media (min-width: 768px) {
+	.DiscussionPage-stream {
+		margin-right: auto;
+		margin-left: 225px;
+	}
+}
+
+@media (min-width: 768px) {
+	.DiscussionPage-list {
+		left: auto;
+		right: -406px;
+		-webkit-transition: right 0.2s;
+		-o-transition: right 0.2s;
+		transition: right 0.2s;
+	}
+
+	.paneShowing .DiscussionPage-list {
+		left: auto;
+		right: 0;
+	}
+
+	.DiscussionPage-list .DiscussionListItem-content {
+		padding-right: 67px;
+		padding-left: 80px;
+	}
+
+	.DiscussionPage-list .DiscussionListItem-relevantPosts {
+		margin-right: -52px;
+		margin-left: -65px;
+	}
+}
+
+@media (min-width: 1100px) {
+	.panePinned .DiscussionPage-list {
+		left: auto;
+		right: 0;
+	}
+
+	.hasPane.panePinned .App-content,
+	.hasPane.panePinned .App-footer {
+		margin-left: auto;
+		margin-right: 400px;
+	}
+}
+
+.EditUserModal-groups .Badge {
+	margin: -3px 0 -3px 3px;
+}
+
+.Hero-close {
+	float: left;
+}
+
+@media (max-width: 767px) {
+	.Hero-close {
+		margin-right: auto;
+		margin-left: -10px;
+	}
+}
+
+.IndexPage-toolbar-view > li {
+	margin-right: auto;
+	margin-left: 5px;
+}
+
+.IndexPage-toolbar-action {
+	float: left;
+}
+
+.IndexPage-toolbar-action > li {
+	margin-left: auto;
+	margin-right: 5px;
+}
+
+.LogInButton .Button-icon {
+	margin-right: auto;
+	margin-left: 5px;
+}
+
+.NotificationGrid-groupToggle .icon {
+	margin-right: auto;
+	margin-left: 2px;
+}
+
+.NotificationList-header .Button {
+	float: left;
+	margin-right: auto;
+	margin-left: -11px;
+}
+
+.NotificationGroup-badges {
+	margin-right: -2px;
+	margin-left: 18px;
+}
+
+.NotificationGroup-badges .Badge {
+	margin-right: auto;
+	margin-left: -13px;
+}
+
+.Notification {
+	padding: 8px 70px 8px 15px;
+}
+
+.Notification .Avatar {
+	float: right;
+	margin: -2px -55px -2px 0;
+}
+
+.Notification-icon {
+	float: right;
+	margin-left: auto;
+	margin-right: -23px;
+}
+
+.Notification-content {
+	margin-right: auto;
+	margin-left: 5px;
+}
+
+.NotificationsDropdown .Dropdown-toggle .Button-label {
+	margin-left: auto;
+	margin-right: 7px;
+}
+
+.NotificationsDropdown-unread {
+	left: auto;
+	right: 17px;
+}
+
+@media (max-width: 767px) {
+	.NotificationsDropdown-unread {
+		left: auto;
+		right: 20px;
+	}
+}
+
+.Post-header > ul > li {
+	margin-right: auto;
+	margin-left: 10px;
+}
+
+.PostUser .UserCard {
+	left: auto;
+	right: -100px;
+	transform-origin: right top;
+}
+
+.PostUser-badges {
+	text-align: left;
+}
+
+.PostUser-badges .Badge {
+	margin-left: auto;
+	margin-right: -10px;
+}
+
+.PostMeta-time {
+	margin-left: auto;
+	margin-right: 5px;
+}
+
+.EventPost-icon {
+	float: right;
+}
+
+.Post-footer .icon {
+	margin-right: auto;
+	margin-left: 5px;
+}
+
+.Post-actions {
+	float: left;
+}
+
+.Post-actions > ul > li {
+	padding-left: 0;
+	padding-right: -5px; /* CHECK: NEGATIVE VALUES ARE NOT ALLOWED */
+}
+
+.PostPreview {
+	padding-left: 0;
+	padding-right: 50px;
+}
+
+.PostPreview .Avatar {
+	float: right;
+	margin-left: auto;
+	margin-right: -50px;
+}
+
+.PostPreview .username {
+	margin-right: auto;
+	margin-left: 5px;
+}
+
+.PostPreview time {
+	margin-right: auto;
+	margin-left: 5px;
+}
+
+@media (max-width: 767px) {
+	.Post-header .Avatar {
+		margin-right: auto;
+		margin-left: 5px;
+	}
+
+	.PostUser-badges {
+		left: auto;
+		right: 6px;
+	}
+
+	.PostUser-badges .Badge {
+		margin-left: auto;
+		margin-right: -13px;
+	}
+
+	.EventPost {
+		padding-left: 0;
+		padding-right: 50px;
+	}
+
+	.EventPost-icon {
+		margin-left: auto;
+		margin-right: -30px;
+	}
+}
+
+@media (min-width: 768px) {
+	.Post {
+		padding-left: 0;
+		padding-right: 105px;
+	}
+
+	.PostUser-avatar {
+		margin-left: auto;
+		margin-right: -85px;
+		float: right;
+	}
+
+	.PostUser-badges {
+		float: right;
+		margin-left: auto;
+		margin-right: -80px;
+	}
+
+	.EventPost-icon {
+		text-align: left;
+		margin-left: auto;
+		margin-right: -85px;
+	}
+}
+
+.PostStream-timeGap {
+	padding: 20px 85px 20px 20px;
+}
+
+.Scrubber a {
+	margin-left: auto;
+	margin-right: -5px;
+}
+
+.Scrubber a .fa {
+	margin-right: auto;
+	margin-left: 2px;
+}
+
+.Scrubber-scrollbar {
+	margin: 8px 3px 8px 0;
+}
+
+.Scrubber-before,
+.Scrubber-after {
+	border-left: 0;
+	border-right: 1px solid #e8edf2;
+}
+
+.Scrubber-unread {
+	border-left: 0;
+	border-right: 1px solid #8fa4bc;
+	background-image: linear-gradient(to left, #e8edf2, rgba(232, 237, 242, 0) 10px, rgba(232, 237, 242, 0));
+	padding-left: 0;
+	padding-right: 13px;
+}
+
+.Scrubber-bar {
+	float: right;
+	margin-left: auto;
+	margin-right: -2px;
+}
+
+.Scrubber-info {
+	left: auto;
+	right: 15px;
+}
+
+.Settings-account li {
+	margin-right: auto;
+	margin-left: 5px;
+}
+
+@media (max-width: 767px) {
+	.Slidable .Slidable-underneath {
+		text-align: left;
+	}
+
+	.Slidable .Slidable-underneath--left {
+		text-align: right;
+	}
+}
+
+.UserCard-controls {
+	float: left;
+}
+
+.UserCard-controls .Dropdown-menu {
+	right: auto;
+	left: 0;
+}
+
+.UserCard-profile {
+	text-align: right;
+	padding-left: 0;
+	padding-right: 130px;
+}
+
+@media (max-width: 767px) {
+	.UserCard-profile {
+		padding-left: 0; /* CHECK: NOT CHANGED */
+		padding-right: 0;
+	}
+}
+
+.UserCard-avatar {
+	float: right;
+	margin-left: auto;
+	margin-right: -130px;
+}
+
+.UserCard-badges {
+	margin: 0 15px 0 0;
+}
+
+.UserCard-info > li {
+	margin-right: auto;
+	margin-left: 15px;
+}
+
+.UserPage .UserCard-controls {
+	float: left;
+}
