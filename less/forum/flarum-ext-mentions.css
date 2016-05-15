@@ -1,0 +1,22 @@
+.PostMention:first-child {
+	margin-left: auto !important;
+	margin-right: 0;
+}
+
+.PostMention:before {
+	margin-right: auto !important;
+	margin-left: 5px;
+}
+
+.MentionsDropdown .PostPreview .Avatar,
+.PostMention-preview .PostPreview .Avatar,
+.Post-mentionedBy-preview .PostPreview .Avatar {
+	margin: 0 -37px 0 0 !important;
+}
+
+.MentionsDropdown .PostPreview-content,
+.PostMention-preview .PostPreview-content,
+.Post-mentionedBy-preview .PostPreview-content {
+	padding-left: 0 !important;
+	padding-right: 37px;
+}
