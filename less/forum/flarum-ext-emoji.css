@@ -1,0 +1,14 @@
+img.emoji {
+	margin: 0 .1em 0 .05em !important;
+}
+
+.EmojiDropdown > li > button {
+	padding-left: 0 !important;
+	padding-right: 45px;
+}
+
+.EmojiDropdown > li > button .emoji {
+	float: right !important;
+	margin-left: auto !important;
+	margin-right: -30px;
+}
