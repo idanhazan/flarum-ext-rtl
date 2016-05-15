@@ -1,0 +1,40 @@
+.TagsPage-header .Button {
+	margin-right: auto !important;
+	margin-left: 10px;
+}
+
+.TagList .TagIcon,
+.TagList ol .TagIcon {
+	margin-right: auto !important;
+	margin-left: 10px;
+}
+
+.TagListItem-info .Button {
+	float: left !important;
+	margin: -8px 10px -8px -10px !important;
+}
+
+.TagList ol {
+	margin-left: auto !important;
+	margin-right: 27px;
+}
+
+.TagGroup {
+	padding-left: 0 !important;
+	padding-right: 150px;
+}
+
+.TagGroup > label {
+	margin-left: auto !important;
+	margin-right: -150px;
+	float: right;
+}
+
+.EditTagModal-delete {
+	float: left !important;
+}
+
+.TagSettingsModal-rangeInput input:first-child {
+	margin-left: auto !important;
+	margin-right: 0;
+}
