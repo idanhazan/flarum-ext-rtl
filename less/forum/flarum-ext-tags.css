@@ -1,0 +1,164 @@
+@media (min-width: 768px) {
+	.TagDiscussionModal .Modal-header h3 {
+		text-align: right !important;
+	}
+}
+
+.TagDiscussionModal .Modal-footer {
+	text-align: right !important;
+}
+
+@media (min-width: 768px) and (max-width: 991px), (min-width: 992px) and (max-width: 1099px), (min-width: 1100px) {
+	.TagDiscussionModal-form-submit {
+		padding-left: 0 !important;
+		padding-right: 15px;
+	}
+}
+
+.TagsInput input {
+	margin-right: auto !important;
+	margin-left: -100%;
+}
+
+.TagsInput-selected .TagsInput-tag {
+	margin-right: auto !important;
+	margin-left: 5px;
+}
+
+.TagsInput-selected .TagsInput-tag:last-child {
+	margin-right: auto !important;
+	margin-left: 10px;
+}
+
+.SelectTagList > li.child {
+	padding-left: 0 !important;
+	padding-right: 45px;
+}
+
+.SelectTagListItem-name {
+	margin-right: auto !important;
+	margin-left: 10px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.TagTiles > li {
+		float: right !important;
+	}
+
+	.TagTiles > li:first-child {
+		border-top-left-radius: 0 !important;
+		border-top-right-radius: 4px;
+	}
+
+	.TagTiles > li:nth-child(2) {
+		border-top-right-radius: 0 !important;
+		border-top-left-radius: 4px;
+	}
+
+	.TagTiles > li:nth-last-child(2):nth-child(even),
+	.TagTiles > li:last-child {
+		border-bottom-right-radius: 0 !important;
+		border-bottom-left-radius: 4px;
+	}
+
+	.TagTiles > li:nth-last-child(2):nth-child(odd),
+	.TagTiles > li:last-child:nth-child(odd) {
+		border-bottom-left-radius: 0 !important;
+		border-bottom-right-radius: 4px;
+	}
+}
+
+@media (min-width: 992px) {
+	.TagTiles > li {
+		float: right !important;
+	}
+
+	.TagTiles > li:first-child {
+		border-top-left-radius: 0 !important;
+		border-top-right-radius: 4px;
+	}
+
+	.TagTiles > li:nth-child(3),
+	.TagTiles > li:nth-child(2):last-child,
+	.TagTiles > li:first-child:last-child {
+		border-top-right-radius: 0 !important;
+		border-top-left-radius: 4px;
+	}
+
+	.TagTiles > li:nth-child(3n):nth-last-child(2),
+	.TagTiles > li:nth-child(3n):nth-last-child(3),
+	.TagTiles > li:last-child {
+		border-bottom-right-radius: 0 !important;
+		border-bottom-left-radius: 4px;
+	}
+
+	.TagTiles > li:nth-child(3n+1):last-child,
+	.TagTiles > li:nth-child(3n+1):nth-last-child(2),
+	.TagTiles > li:nth-child(3n+1):nth-last-child(3) {
+		border-bottom-left-radius: 0 !important;
+		border-bottom-right-radius: 4px;
+	}
+}
+
+.TagTile-info {
+	padding-right: 0 !important;
+	padding-left: 20px;
+}
+
+.TagTile-children a {
+	margin-right: auto !important;
+	margin-left: 10px;
+}
+
+.TagTile-lastDiscussion-title {
+	margin-right: auto !important;
+	margin-left: 10px;
+}
+
+.TagLinkButton.child {
+	margin-left: auto !important;
+	margin-right: 10px;
+}
+
+.DiscussionComposer-changeTags {
+	margin-right: auto !important;
+	margin-left: 15px;
+}
+
+.DiscussionListItem-info > .item-tags {
+	margin-right: auto !important;
+	margin-left: 4px;
+}
+
+@media (min-width: 768px) {
+	.IndexPage .DiscussionListItem-title,
+	.UserPage .DiscussionListItem-title {
+		margin-right: auto !important;
+		margin-left: 155px;
+	}
+
+	.IndexPage .DiscussionListItem-info > .item-tags,
+	.UserPage .DiscussionListItem-info > .item-tags {
+		margin-right: 0 !important; /* CHECK: NOT CHANGED */
+		margin-left: 0;
+		right: auto !important;
+		left: 80px;
+	}
+}
+
+@media (min-width: 992px) {
+	.TagsPage .sideNav > ul > li,
+	.TagsPage .sideNav .Dropdown-menu > li {
+		margin: 0 0 0 20px !important;
+	}
+
+	.TagsPage .sideNav .Dropdown--select .Dropdown-menu > li > a {
+		padding-left: 0;
+		padding-right: 25px !important;
+	}
+
+	.TagsPage .sideNav .Dropdown--select .Dropdown-menu > li > a .icon {
+		margin-left: auto;
+		margin-right: -25px !important;
+	}
+}
