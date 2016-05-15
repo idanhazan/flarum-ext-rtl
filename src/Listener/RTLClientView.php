@@ -5,7 +5,7 @@ namespace Flagrow\RTL\Listener;
 use Flarum\Event\ConfigureClientView;
 use Illuminate\Contracts\Events\Dispatcher;
 
-class ChangeDirection
+class RTLClientView
 {
     public function subscribe(Dispatcher $events)
     {
