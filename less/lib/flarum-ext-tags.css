@@ -1,0 +1,17 @@
+.DiscussionHero .TagsLabel .TagLabel.colored {
+	margin-right: auto !important;
+	margin-left: 5px;
+}
+
+.TagsLabel .TagLabel:first-child {
+	border-radius: 0 4px 4px 0 !important;
+}
+
+.TagsLabel .TagLabel:last-child {
+	border-radius: 4px 0 0 4px !important;
+}
+
+.TagIcon {
+	margin-left: auto !important;
+	margin-right: 1px;
+}
