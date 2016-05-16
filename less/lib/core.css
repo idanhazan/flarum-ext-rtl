@@ -1,0 +1,424 @@
+.checkbox {
+	padding-left: 0;
+	padding-right: 20px;
+}
+
+.checkbox input[type=checkbox],
+.checkbox input[type=radio] {
+	margin-left: auto;
+	margin-right: -20px;
+	float: right;
+}
+
+@media (min-width: 768px) {
+	.sideNav .Dropdown--select .Dropdown-menu > li > a {
+		padding: 8px 30px 8px 0;
+	}
+
+	.sideNav .Dropdown--select .Dropdown-menu > li > a .Button-icon {
+		float: right;
+		margin-left: auto;
+		margin-right: -30px;
+	}
+}
+
+.sideNav--horizontal .Dropdown-menu > li {
+	margin: 0 0 0 20px;
+}
+
+.sideNav--horizontal .Dropdown--select .Dropdown-menu > li > a {
+	padding-left: 0;
+	padding-right: 25px;
+}
+
+.sideNav--horizontal .Dropdown--select .Dropdown-menu > li > a .icon {
+	margin-left: auto;
+	margin-right: -25px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.sideNav > ul > li,
+	.sideNav .Dropdown-menu > li {
+		margin: 0 0 0 20px;
+	}
+
+	.sideNav .Dropdown--select .Dropdown-menu > li > a {
+		padding-left: 0;
+		padding-right: 25px;
+	}
+
+	.sideNav .Dropdown--select .Dropdown-menu > li > a .icon {
+		margin-left: auto;
+		margin-right: -25px;
+	}
+}
+
+@media (min-width: 992px) {
+	.sideNav {
+		float: right;
+	}
+}
+
+@media (min-width: 992px) {
+	.sideNavOffset {
+		margin-left: auto;
+		margin-right: 240px;
+	}
+}
+
+@media (max-width: 767px) {
+	.App-primaryControl {
+		right: auto;
+		left: 0;
+	}
+
+	.App-titleControl {
+		left: auto;
+		right: 50%;
+		margin-left: auto;
+		margin-right: -100px;
+	}
+
+	.App-backControl {
+		left: auto;
+		right: 0;
+	}
+}
+
+@media (max-width: 767px) {
+	.App-drawer {
+		left: auto;
+		right: 0;
+		-webkit-transform: translate3d(276px, 0, 0);
+		transform: translate3d(276px, 0, 0);
+	}
+}
+
+@media (max-width: 767px) {
+	.Header-controls .FormControl,
+	.Header-controls .ButtonGroup,
+	.Header-controls .Button {
+		text-align: right;
+	}
+}
+
+@media (min-width: 768px) {
+	.Header-navigation {
+		float: right;
+		margin-right: auto;
+		margin-left: 25px;
+	}
+
+	.Header-primary {
+		float: right;
+	}
+
+	.Header-title {
+		float: right;
+		margin: 0 0 0 15px;
+	}
+
+	.Header-secondary {
+		float: left;
+	}
+
+	.Header-secondary .Search {
+		margin-right: auto;
+		margin-left: 10px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.Header-secondary .Search:not(.active) input {
+		padding-right: 0; /* CHECK: NOT CHANGED */
+		padding-left: 0;
+	}
+}
+
+.Alert-controls {
+	margin: 0 8px 0 -8px;
+}
+
+.AlertManager {
+	left: auto;
+	right: 20px;
+}
+
+.ButtonGroup > .Button {
+	float: right;
+}
+
+.ButtonGroup > .Button:first-child:not(:last-child):not(.Dropdown-toggle) {
+	margin-left: auto;
+	margin-right: 0;
+	border-top-right-radius: 0; /* CHECK: NOT CHANGED */
+	border-top-left-radius: 0;
+	border-bottom-right-radius: 0; /* CHECK NOT CHANGED */
+	border-bottom-left-radius: 0;
+}
+
+.ButtonGroup > .Button:last-child:not(:first-child),
+.ButtonGroup > .Button.Dropdown-toggle:not(:first-child) {
+	border-top-left-radius: 0; /* CHECK NOT CHANGED */
+	border-top-right-radius: 0;
+	border-bottom-left-radius: 0; /* CHECK NOT CHANGED */
+	border-bottom-right-radius: 0;
+}
+
+.ButtonGroup .Button + .Button {
+	margin-left: auto;
+	margin-right: 1px;
+}
+
+.Button .Button-label {
+	-webkit-transition: margin-left 0.1s;
+	-o-transition: margin-left 0.1s;
+	transition: margin-left 0.1s;
+}
+
+.Button .LoadingIndicator {
+	margin: 0 -15px 0 -10px;
+}
+
+.Button.loading .Button-label {
+	margin-right: auto;
+	margin-left: 20px;
+}
+
+.SessionDropdown .Dropdown-toggle .Avatar {
+	margin: -2px -6px -2px 5px;
+}
+
+.Button-icon {
+	margin-right: auto;
+	margin-left: 3px;
+}
+
+.Button-caret {
+	margin-left: auto;
+	margin-right: 3px;
+}
+
+.Button-badge {
+	margin-left: auto;
+	margin-right: 10px;
+}
+
+.Checkbox--switch {
+	padding-left: 0;
+	padding-right: 65px;
+}
+
+.Checkbox--switch .Checkbox-display {
+	float: right;
+	margin-left: auto;
+	margin-right: -65px;
+}
+
+.Checkbox--switch .Checkbox-display .LoadingIndicator {
+	margin-left: auto;
+	margin-right: 10px;
+}
+
+.Checkbox--switch .Checkbox-display:before {
+	left: auto;
+	right: 3px;
+	-webkit-transition: opacity 0.2s, right 0.2s;
+	-o-transition: opacity 0.2s, right 0.2s;
+	transition: opacity 0.2s, right 0.2s;
+}
+
+.on.Checkbox--switch .Checkbox-display:before {
+	left: auto;
+	right: 25px;
+}
+
+.Dropdown-menu {
+	left: auto;
+	right: 0;
+	text-align: right;
+}
+
+.Dropdown-menu > li > a,
+.Dropdown-menu > li > button,
+.Dropdown-menu > li > span {
+	text-align: right;
+}
+
+.Dropdown-menu > li > a.hasIcon,
+.Dropdown-menu > li > button.hasIcon,
+.Dropdown-menu > li > span.hasIcon {
+	padding-left: 0;
+	padding-right: 40px;
+}
+
+.Dropdown-menu > li > a .Button-icon,
+.Dropdown-menu > li > button .Button-icon,
+.Dropdown-menu > li > span .Button-icon {
+	float: right;
+	margin-left: auto;
+	margin-right: -25px;
+}
+
+.Dropdown-menu--right {
+	right: auto;
+	left: 0;
+}
+
+@media (max-width: 767px) {
+	.Dropdown .Dropdown-menu > li > a.hasIcon,
+	.Dropdown .Dropdown-menu > li > button.hasIcon {
+		padding-left: 0;
+		padding-right: 50px;
+	}
+
+	.Dropdown .Dropdown-menu > li > a .Button-icon,
+	.Dropdown .Dropdown-menu > li > button .Button-icon {
+		margin-left: auto;
+		margin-right: -30px;
+	}
+}
+
+.Form--centered .checkbox {
+	text-align: right;
+}
+
+.Modal-body .Form--centered .helpText {
+	text-align: right;
+}
+
+@media (min-width: 768px) {
+	.Modal-close {
+		right: auto;
+		left: 10px;
+	}
+}
+
+.Navigation-pin {
+	margin-left: auto !important;
+	margin-right: -5px !important;
+	border-radius: 4px 0 0 4px;
+	-webkit-transition: opacity 0.2s, margin-right 0.2s;
+	-o-transition: opacity 0.2s, margin-right 0.2s;
+	transition: opacity 0.2s, margin-right 0.2s;
+}
+
+.Navigation-pin .icon {
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+@media (min-width: 1100px) {
+	.hasPane.panePinned .Navigation-back,
+	.hasPane.paneShowing .Navigation-back {
+		border-radius: 0 4px 4px 0 !important;
+	}
+
+	.hasPane.panePinned .Navigation-pin,
+	.hasPane.paneShowing .Navigation-pin {
+		margin-left: auto !important;
+		margin-right: 1px !important;
+	}
+}
+
+.Navigation-drawer.new:after {
+	right: auto;
+	left: 10px;
+}
+
+@media (min-width: 768px) {
+	.Search {
+		-webkit-transition: margin-right 0.4s;
+		-o-transition: margin-right 0.4s;
+		transition: margin-right 0.4s;
+	}
+
+	.Search.focused {
+		margin-left: auto;
+		margin-right: -400px;
+	}
+}
+
+.Search-results {
+	right: auto;
+	left: 0;
+}
+
+@media (max-width: 767px) {
+	.Search-results {
+		left: auto;
+		right: 0;
+	}
+}
+
+.Search-input:before {
+	float: right;
+	margin-right: auto;
+	margin-left: -36px;
+}
+
+.Search-input input {
+	float: right;
+}
+
+.Search-input .Button {
+	float: right;
+	margin-left: auto;
+	margin-right: -36px;
+}
+
+.UserSearchResult .Avatar {
+	margin: -2px 0 -2px 10px;
+}
+
+.Select select {
+	padding-right: 0;
+	padding-left: 30px;
+}
+
+.Select-caret {
+	margin-left: auto;
+	margin-right: -30px;
+}
+
+.tooltip.right {
+	margin-left: auto;
+	margin-right: 3px;
+}
+
+.tooltip.left {
+	margin-left: auto;
+	margin-right: -3px;
+}
+
+.tooltip.top .tooltip-arrow {
+	left: auto;
+	right: 50%;
+	margin-left: auto;
+	margin-right: -5px;
+}
+
+.tooltip.right .tooltip-arrow {
+	left: auto;
+	right: 0;
+	border-width: 5px 0 5px 5px;
+	border-right-color: rgba(0, 0, 0, 0);
+	border-left-color: rgba(0, 0, 0, 0.9);
+}
+
+.tooltip.left .tooltip-arrow {
+	right: auto;
+	left: 0;
+	border-width: 5px 5px 5px 0;
+	border-left-color: rgba(0, 0, 0, 0);
+	border-right-color: rgba(0, 0, 0, 0.9);
+}
+
+.tooltip.bottom .tooltip-arrow {
+	left: auto;
+	right: 50%;
+	margin-left: auto;
+	margin-right: -5px;
+}
